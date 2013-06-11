@@ -9,8 +9,9 @@ module.exports = function (grunt) {
 		function fileDone(file) {
 			grunt.log.writeln("Parsing File " + file + " DONE!");
 			if(--counter === 0) {
-				done();
+				prepData(output);
 				grunt.file.write("data.json",  JSON.stringify(output));
+				done();
 			}
 		}
 
@@ -21,8 +22,34 @@ module.exports = function (grunt) {
 	});
 };
 
+function prepData(data) {
+	var items = data.twitter;
+	data.twitter = {
+		items: items,
+		categories: getCategories(items)
+	};
 
+	items = data.web;
+	data.web =  {
+		items: items,
+		categories: getCategories(items)
+	};
+}
 
+function getCategories(items) {
+	var set = {}, result = [], i, n, k;
+	for(i = 0, n = items.length; i < n ; i++) {
+		set[items[i].category] = true;
+	}
+
+	for(k in set) {
+		if(set.hasOwnProperty(k)) {
+			result.push(k);
+		}
+	}
+
+	return result.sort();
+}
 
 function parseCSV (file, obj, fileDone, grunt) {
 
