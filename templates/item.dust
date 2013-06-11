@@ -1,3 +1,4 @@
+{#items}
 <li data-category="{category}"> 
     <a class="circle" href="#">
         <img src="img/{?tweet}twitter{:else}web{/tweet}/{name}.jpg">
@@ -14,3 +15,4 @@
         {>"social"/}
     </div> 
 </li>
+{/items}

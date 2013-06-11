@@ -23,18 +23,23 @@ module.exports = function (grunt) {
 };
 
 function prepData(data) {
-	var items = data.twitter;
-	data.twitter = {
-		items: items,
-		categories: getCategories(items)
-	};
 
-	items = data.web;
-	data.web =  {
-		items: items,
-		categories: getCategories(items)
-	};
+	if(data.twitter && data.twitter.items) {
+		//normalizeItems(data.twitter.items);
+		data.twitter.categories = getCategories(data.twitter.items);
+	}
+
+	if(data.web && data.web.items) {
+		//normalizeItems(data.web.items);
+		data.web.categories = getCategories(data.web.items);
+	}
 }
+
+// function normalizeItems(items) {
+// 	//var stuff = items.replace(" ", "");
+
+// 	return items;
+// }
 
 function getCategories(items) {
 	var set = {}, result = [], i, n, k;
@@ -75,7 +80,7 @@ function parseCSV (file, obj, fileDone, grunt) {
 
 		records.push(filtered);
 	}).on("end",function(){
-		obj[getPropertyName(file)] = records;
+		obj[getPropertyName(file)] = { items: records };
 		fileDone(file);
 	});
 }

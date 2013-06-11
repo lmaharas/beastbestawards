@@ -15,29 +15,7 @@ $(document).ready(function() {
 
 
 function prepData(data) {
-	var items = data.twitter;
-	data.twitter = {
-		items: items,
-		categories: getCategories(items)
-	};
-	
-	data.webCategories = getCategories(data.web);
 	console.log(data);
-}
-
-function getCategories(items) {
-	var set = {}, result = [], i, n, k;
-	for(i = 0, n = items.length; i < n ; i++) {
-		set[items[i].category] = true;
-	}
-
-	for(k in set) {
-		if(set.hasOwnProperty(k)) {
-			result.push(k);
-		}
-	}
-
-	return result.sort();
 }
 
 function navOpenClose() {
