@@ -1,0 +1,99 @@
+@font-face {
+	font-family: 'beast-awards-icon-font';
+	src:url('../fonts/beast-awards-icon-font.eot');
+	src:url('../fonts/beast-awards-icon-font.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/beast-awards-icon-font.woff') format('woff'),
+		url('../fonts/beast-awards-icon-font.ttf') format('truetype'),
+		url('../fonts/beast-awards-icon-font.svg#beast-awards-icon-font') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'beast-awards-icon-font';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-close-x, .icon-caret-up, .icon-caret-right, .icon-caret-left, .icon-caret-down, .icon-replay, .icon-close-x-circle-filled, .icon-close-x-circle, .icon-share, .icon-search, .icon-arrow-west, .icon-arrow-south, .icon-arrow-north, .icon-arrow-east, .icon-facebook, .icon-twitter, .icon-still_camera, .icon-email, .icon-expand, .icon-contract {
+	font-family: 'beast-awards-icon-font';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-close-x:before {
+	content: "\e000";
+}
+.icon-caret-up:before {
+	content: "\e001";
+}
+.icon-caret-right:before {
+	content: "\e002";
+}
+.icon-caret-left:before {
+	content: "\e003";
+}
+.icon-caret-down:before {
+	content: "\e004";
+}
+.icon-replay:before {
+	content: "\e005";
+}
+.icon-close-x-circle-filled:before {
+	content: "\e006";
+}
+.icon-close-x-circle:before {
+	content: "\e007";
+}
+.icon-share:before {
+	content: "\e008";
+}
+.icon-search:before {
+	content: "\e009";
+}
+.icon-arrow-west:before {
+	content: "\e00a";
+}
+.icon-arrow-south:before {
+	content: "\e00b";
+}
+.icon-arrow-north:before {
+	content: "\e00c";
+}
+.icon-arrow-east:before {
+	content: "\e00d";
+}
+.icon-facebook:before {
+	content: "\e00e";
+}
+.icon-twitter:before {
+	content: "\e00f";
+}
+.icon-still_camera:before {
+	content: "\e010";
+}
+.icon-email:before {
+	content: "\e011";
+}
+.icon-expand:before {
+	content: "\e012";
+}
+.icon-contract:before {
+	content: "\e013";
+}

@@ -1,0 +1,371 @@
+/*
+ * HOMEPAGE STYLES
+ *
+ * @project     The Best Of The Daily Beast
+ * @section     desktop
+ * @date        2013-04-02
+ * @author      
+ * @copyright   2013 by The Newsweek Daily Beast Company
+ *
+ */
+
+/*
+ * DEFAULT
+ */
+body {
+	font-family: "TitlingGothicFBStandCond", "Arial Narrow", Arial, sans-serif;
+	font-size: 12px;
+}
+
+a {
+	color: #000;
+}
+
+a:hover {
+	color: #ccc;
+}
+
+
+/*
+ * NAV
+ */
+.nav {
+	background-color: #000;
+	color: #fff;
+	width: 102px;
+	height: 100%;
+	min-height: 500px;
+	text-align: center;
+	position: fixed;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.nav a {
+	color: #fff;
+	display: block;
+}
+
+.nav .logo {
+	display: block;
+	margin: 20px 0;
+	text-align: center;
+}
+
+.nav .logo:hover {
+	color: #ee3224;
+}
+
+.nav .logo img {
+	margin-bottom: 5px;
+	width: 82px;
+	padding: 0 10px;
+}
+
+.nav .logo .page-title {
+	line-height: 0;
+}
+
+.nav .sections .heading {
+	font-size: 14px;
+}
+
+.nav .tdb a:hover {
+	color: #000;
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+         -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+}
+
+.nav .tdb {
+	margin-bottom: 10px;
+	width: 100%;
+	background-color: #ee3224;
+}
+
+.nav .sections > li {
+	margin: 0;
+	width: 100%;
+    padding: 0;
+}
+
+.nav .sections .social,
+.nav .sections .social:hover {
+	border: none;
+	background-color: transparent;
+	margin: 5px 0;
+	padding: 0;
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+         -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+}
+
+.nav .sections .social:hover a,
+.nav .sections > li .heading:hover a,
+.nav .sections > li .heading.active a {
+	color: #ee3224;
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+         -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+}
+
+.nav .tdb a,
+.nav .sections a {
+	padding: 5px 0;
+}
+
+.nav .sections .heading a,
+.nav .sections .about a {
+	position: relative;
+	color: #fff;
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+         -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+}
+
+.nav .sections .about + .wrapper {	
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+	position: absolute;
+	background: #000;
+	padding: 20px;
+	width: 345px;
+	left: 112px;
+	top: 10px;
+	text-transform: none;
+	font-size: 12px;
+	line-height: 2.2;
+    -webkit-transition: all .3s ease-in-out;
+       -moz-transition: all .3s ease-in-out;
+         -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+    z-index: 100;
+}
+
+.nav .sections .about .main {
+	margin-bottom: 20px;	
+}
+
+.nav .sections .wrapper.collapse {
+	opacity: 0;
+}
+
+.nav .sections .dropdown.collapse {
+	display: none;
+}
+
+.nav .sections {
+	margin-bottom: 10px;
+}
+
+.nav .sections a {
+	display: inline-block;
+	padding: 5px;
+}
+
+.nav .dropdown a:hover {
+	colo: #fff;
+	border: 1px solid #fff;
+	padding: 4px 5px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.nav .dropdown {
+	margin-bottom: 10px;
+}
+
+.nav .dropdown li {
+	text-transform: capitalize;
+}
+
+.nav .icon-twitter,
+.nav .icon-facebook {
+	font-size: 25px;
+	margin: 5px;
+}
+
+
+
+/*
+ * CONTENT
+ */
+.content {
+	position: relative;
+	margin-left: 102px;  /* width = nav width */
+	padding: 4% 0 4% 4%;
+}
+
+.content .web,
+.content .twitter {
+	overflow: hidden;
+}
+
+.content li {
+	float: left;
+	text-align: center;
+	width: 150px;
+	height: 150px;
+	margin: 17px;	
+}
+
+.content .circle {
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: relative;
+}
+
+.content .circle .title {
+	display: none;
+	width: 150px;
+	height: 150px;
+	color: #000;
+	font-size: 24px;
+	font-weight: bold;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+	z-index: 10;
+    -webkit-transition: all .2s ease-in-out;
+       -moz-transition: all .2s ease-in-out;
+         -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+}
+
+.content .circle:hover .title {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    -webkit-transition: all .2s ease-in-out;
+       -moz-transition: all .2s ease-in-out;
+         -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+}
+
+.content .circle img {
+	position: absolute;
+	left: 0;
+	top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 150px;
+       -moz-border-radius: 150px;
+            border-radius: 150px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+         ilter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    -webkit-transition: all .2s ease-in-out;
+       -moz-transition: all .2s ease-in-out;
+         -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+}
+
+.content .circle:hover img {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+	opacity: 0.4;
+    -webkit-transition: all .2s ease-in-out;
+       -moz-transition: all .2s ease-in-out;
+         -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+}
+
+
+/*overlay*/
+.content .overlay,
+.content .info {
+	visibility: hidden;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+}
+
+.content .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background-color: rgba(255,255,255,0.9);
+}
+
+/* info */
+.content .info {
+	position: absolute;
+	height: 500px;
+	width: 380px;
+	text-align: center;
+	z-index: 110;
+    -webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.content .info a:hover {
+	color: #ee3224;
+}
+
+
+.content .info .circle {
+	width: 255px;
+	height: 255px;
+	display: inline-block;
+	margin: 20px;	
+    -webkit-border-radius: 255px;
+       -moz-border-radius: 255px;
+            border-radius: 255px;
+}
+
+.content .info .close,
+.nav .wrapper .close {
+	float: right;
+	height: 26px;
+	font-size: 26px;
+	display: block;
+}
+
+.content .info .facebook,
+.content .info .twitter {
+	display: inline-block;
+}
+
+.content .info .icon-twitter,
+.content .info .icon-facebook {
+	font-size: 18px;
+	margin: 5px;
+}
+
+.content .info .main,
+.nav .wrapper .main {
+	clear: both;
+	margin-bottom: 10px;
+}
+
+.content .info .title {
+	font-size: 24px;
+	margin: 10px 0;
+}
+
+.content .info .quote {
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 1.4;
+}
+
+.content .info .text {
+	font-size: 14px;
+	width: 80%;
+	margin: 0 auto;
+}

@@ -1,0 +1,11 @@
+<a class="facebook" href="#" 
+    data-link="http://beastbestawards.com/{?twitter}twitter{:else}web{/twitter}#{name}" 
+    data-picture="http://beastbestawards.com/img/{?twitter}twitter/{name}.jpg{:else}web/{name}_home.jpg{/twitter}" 
+    data-name="{name}" 
+    data-description="Congratulations {name} on your #beastBest Award 2013!">
+    <span class="icon-facebook" aria-hidden="true"></span>
+</a>
+<a class="twitter" target="_blank" 
+    href="https://twitter.com/intent/tweet?url=/{?twitter}twitter{:else}web{/twitter}#{name}&text=Congratulations {name} on your %23beastBest Award 2013!&via=thedailybeast&hashtags=beastBest&related=Newsweek&counturl={url}">
+    <span class="icon-twitter" aria-hidden="true"></span>
+</a>

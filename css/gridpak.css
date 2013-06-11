@@ -1,0 +1,206 @@
+/*!
+ * Gridpak Beta CSS
+ *
+ * Generator - http://gridpak.com/
+ * Created by @erskinedesign
+ */
+
+/* Reusable column setup */
+.col {
+    border: 0 solid rgba(0, 0, 0, 0);
+    border-style: solid;
+    border-color: transparent;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+}
+
+.row {
+    max-width: 1020px;
+}
+
+/* 1. 4 Column Grid 0px - 559px     (MOBILE)
+-----------------------------------------------------------------------------
+
+Span 1:    25%
+Span 2:    50%
+Span 3:    75%
+Span 4:    100%
+
+----------------------------------------------------------------------------- */
+
+@media (min-width: 0px) and (max-width: 559px) {
+
+    .row {
+        margin-left: -20px;
+    }
+
+    .col {
+        border-left-width: 20px;
+        padding: 0;
+    }
+
+    .span_1 {
+        width: 25%;
+    }
+
+    .span_2 {
+        width: 50%;
+    }
+
+    .span_3 {
+        width: 75%;
+    }
+
+    .span_4{
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* 2. 8 Column Grid 560px - 799px   (TABLET)
+-----------------------------------------------------------------------------
+
+Span 1:    12.5%
+Span 2:    25.0%
+Span 3:    37.5%
+Span 4:    50.0%
+Span 5:    62.5%
+Span 6:    75.0%
+Span 7:    87.5%
+Span 8:    100%
+
+----------------------------------------------------------------------------- */
+
+@media (min-width: 560px) and (max-width: 799px) {
+
+    .row {
+        margin-left: -20px;
+    }
+
+    .col {
+        border-left-width: 20px;
+        padding: 0;
+    }
+
+    .span_1 {
+        width: 12.5%;
+    }
+
+    .span_2 {
+        width: 25.0%;
+    }
+
+    .span_3{
+        width: 37.5%;
+    }
+
+    .span_4 {
+        width: 50.0%;
+    }
+
+    .span_5 {
+        width: 62.5%;
+    }
+
+    .span_6 {
+        width: 75.0%;
+    }
+
+    .span_7 {
+        width: 87.5%;
+    }
+
+    .span_8 {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* 3. 12 Column Grid 800px - Infinity   (DESKTOP)
+    @NOTE - This chunk was originally at the bottom of this file
+            I moved it to the top of the grid selectors so that we could solve a problem for ie8.
+            Since ie8 doesn't read media queries we need to have a default grid setup outside of a media
+            query. Instead of moving this to a different file I've used the cascade to ensure that when a media
+            query applies it overrides the default grid setup.
+    -----------------------------------------------------------------------------
+
+    Span 1:    8.33333333333%
+    Span 2:    16.6666666667%
+    Span 3:    25.0%
+    Span 4:    33.3333333333%
+    Span 5:    41.6666666667%
+    Span 6:    50.0%
+    Span 7:    58.3333333333%
+    Span 8:    66.6666666667%
+    Span 9:    75.0%
+    Span 10:    83.3333333333%
+    Span 11:    91.6666666667%
+    Span 12:    100%
+
+    ----------------------------------------------------------------------------- */
+
+@media (min-width: 800px) {
+
+    .row {
+        margin-left: -25px;
+    }
+
+    .col {
+        border-left-width: 25px;
+        padding: 0;
+    }
+
+    .span_1 {
+        width: 8.33333333333%;
+    }
+
+    .span_2 {
+        width: 16.6666666667%;
+    }
+
+    .span_3 {
+        width: 25.0%;
+    }
+
+    .span_4 {
+        width: 33.3333333333%;
+    }
+
+    .span_5 {
+        width:41.6666666667%;
+    }
+
+    .span_6 {
+        width: 50.0%;
+    }
+
+    .span_7 {
+        width: 58.3333333333%;
+    }
+
+    .span_8 {
+        width: 66.6666666667%;
+    }
+
+    .span_9 {
+        width: 75.0%;
+    }
+
+    .span_10 {
+        width: 83.3333333333%;
+    }
+
+    .span_11 {
+        width: 91.6666666667%;
+    }
+
+    .span_12 {
+        margin-left: 0;
+        width: 100%;
+    }
+}
