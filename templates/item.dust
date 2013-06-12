@@ -9,7 +9,7 @@
         <div class="main">
             <h3 class="title"><a href="{url}" target="_blank">{name}</a></h3>
             {?tweet}<p class="quote">"{tweet}"</p>{/tweet}
-            <img class="circle" src="{?imgPathLg}{imgPathLg}{:else}{imgPath}{/imgPathLg}">
+            <img class="{?imgPathLg}rect{:else}circle{/imgPathLg}" src="{?imgPathLg}{imgPathLg}{:else}{imgPath}{/imgPathLg}">
             <p class="text">{blurb}</p>
         </div>
         {>"social"/}

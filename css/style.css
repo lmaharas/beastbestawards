@@ -324,6 +324,12 @@ a:hover {
             border-radius: 255px;
 }
 
+.content .info .rect {
+	width: 100%;
+	display: inline-block;
+	margin: 20px;
+}
+
 .content .info .close,
 .nav .wrapper .close {
 	float: right;
