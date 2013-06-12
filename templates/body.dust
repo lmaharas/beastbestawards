@@ -1,7 +1,15 @@
 {>"nav"/}
 
 <section class="content">
-    <div class="overlay"></div>
+    <div class="overlay">
+        {#twitter.items}
+            {>"overlayitem"/}            
+        {/twitter.items}
+        {#web.items}
+            {>"overlayitem"/}            
+        {/web.items}
+    </div>
+
     <ul class="twitter clearfix">
         {#twitter}
             {>"item"/}            

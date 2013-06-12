@@ -6,7 +6,7 @@
     </a>
 	<nav>
         <ul class="sections">
-            <li><h2 class="heading about"><a href="about">+ About</a></h2>
+            <li><h2 class="heading about"><a href="#about">+ About</a></h2>
                 <div class="wrapper collapse">
                     <a class="close" href="#"><span class="icon-close-x" aria-hidden="true"></span></a>
                     <div class="main">
@@ -16,21 +16,21 @@
                 </div>
             </li>
             <li>
-                <h2 class="heading"><a href="twitter">+ Twitter</a></h2>
-                <ul class="dropdown collapse">
-                    <li><a href="#">All</a></li>
-                    {#twitter.categories}
-                        <li><a href="#">{.}</a></li>
-                    {/twitter.categories}
+                <h2 class="web heading"><a href="#web">+ Web</a></h2>
+                <ul class="web dropdown collapse">
+                    <li><a href="#web">All</a></li>
+                    {#web.categories}
+                        <li><a href="#{id}">{name}</a></li>
+                    {/web.categories}
                 </ul>
             </li>
             <li>
-                <h2 class="heading"><a href="web">+ Web</a></h2>
-                <ul class="dropdown collapse">
-                    <li><a href="#">All</a></li>
-                    {#web.categories}
-                        <li><a href="#">{.}</a></li>
-                    {/web.categories}
+                <h2 class="twitter heading"><a href="#twitter">+ Twitter</a></h2>
+                <ul class="twitter dropdown collapse">
+                    <li><a href="#twitter">All</a></li>
+                    {#twitter.categories}
+                        <li><a href="#{id}" data-filter="{name}">{name}</a></li>
+                    {/twitter.categories}
                 </ul>
             </li>
             <li class="social"> <!-- TODO: fill out image for facebook -->

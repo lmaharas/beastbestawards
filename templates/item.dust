@@ -1,18 +1,8 @@
-{#items}  
-<li data-category="{category}"> 
-    <a class="circle" href="#">
+{#items} 
+<li class="bubble {categoryId}"> 
+    <a class="circle" href="#{id}">
         <img src="{imgPath}">
         <h3 class="title">{?handle}{handle}{:else}{name}{/handle}</h3>
     </a>
-    <div class="info">
-        <a class="close" href="#"><span class="icon-close-x" aria-hidden="true"></span></a>
-        <div class="main">
-            <h3 class="title"><a href="{url}" target="_blank">{name}</a></h3>
-            {?tweet}<p class="quote">"{tweet}"</p>{/tweet}
-            <img class="{?imgPathLg}rect{:else}circle{/imgPathLg}" src="{?imgPathLg}{imgPathLg}{:else}{imgPath}{/imgPathLg}">
-            <p class="text">{blurb}</p>
-        </div>
-        {>"social"/}
-    </div> 
 </li>
 {/items}

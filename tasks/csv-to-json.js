@@ -25,43 +25,63 @@ module.exports = function (grunt) {
 function prepData(data) {
 
 	if(data.twitter && data.twitter.items) {
+		data.twitter.categories = getCategories(data.twitter.items, 'twitter');
 		normalizeItems(data.twitter.items, 'twitter');
-		data.twitter.categories = getCategories(data.twitter.items);
 	}
 
 	if(data.web && data.web.items) {
+		data.web.categories = getCategories(data.web.items, 'web');
 		normalizeItems(data.web.items, 'web');
-		data.web.categories = getCategories(data.web.items);
 	}
 }
 
 function normalizeItems(items, folderName) {
-	var i, imgName;
+	var i, item, imgName, categoryId;
 	for(i = 0; i < items.length; i++) {
-		imgName = items[i].name.replace(" ", "").toLowerCase();
+		item = items[i];
+		imgName = item.name.toLowerCase().replace(/[^a-z0-9]/g, "");
 
-		items[i].imgPath = "img/" + folderName + "/" + imgName + ".jpg";
+		item.imgPath = "img/" + folderName + "/" + imgName + ".jpg";
 
 		if (folderName === "web") {
-			items[i].imgPathLg = "img/" + folderName + "/" + imgName + "_home.jpg";
+			item.imgPathLg = "img/" + folderName + "/" + imgName + "_home.jpg";
 		}
+
+        categoryId = getCategoryId(item.category, folderName);
+		item.id =  categoryId + "-" + imgName;
+
+		item.categoryId = categoryId;
+		delete item.category;
 	}
 
 }
 
-function getCategories(items) {
-	var set = {}, result = [], i, k;
+function getCategoryId(name, prefix) {
+	return prefix + '-' + name.toLowerCase().replace(/[^a-z0-9]/g, "");
+}
+
+function getCategories(items, prefix) {
+	var set = {}, names = [], categories = [], i, k;
 	for(i = 0; i < items.length; i++) {
 		set[items[i].category] = true;
 	}
 
 	for(k in set) {
 		if(set.hasOwnProperty(k)) {
-			result.push(k);
+			names.push(k);
 		}
 	}
 
-	return result.sort();
+	names = names.sort();
+
+    for(i = 0; i < names.length; i++) {
+        categories.push({
+            id: getCategoryId(names[i], prefix),
+            name: names[i]
+        });
+    }
+
+    return categories;
 }
 
 function parseCSV (file, obj, fileDone, grunt) {

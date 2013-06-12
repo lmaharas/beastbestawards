@@ -122,11 +122,10 @@ a:hover {
             transition: all .3s ease-in-out;
 }
 
-.nav .sections .about + .wrapper {
+.nav .wrapper {
 	display: none;	
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
 	position: absolute;
 	background: #000;
 	padding: 20px;
@@ -142,12 +141,13 @@ a:hover {
             transition: all .3s ease-in-out;
 }
 
-.nav .sections .about .main {
-	margin-bottom: 20px;	
+.nav .wrapper.open {
+	display: block;
+    opacity: 1;
 }
 
-.nav .sections .wrapper.collapse {
-	opacity: 0;
+.nav .sections .about .main {
+	margin-bottom: 20px;	
 }
 
 .nav .sections .dropdown.collapse {
@@ -202,6 +202,7 @@ a:hover {
 .content .twitter {
 	overflow: hidden;
 	display: none;
+	width: 95%;
 }
 
 .content li {
@@ -299,7 +300,7 @@ a:hover {
 
 /* info */
 .content .info {
-	position: absolute;
+	position: fixed;
 	height: 500px;
 	width: 380px;
 	text-align: center;
@@ -307,6 +308,8 @@ a:hover {
     -webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
             box-sizing: border-box;
+
+	z-index: 100;
 }
 
 .content .info a:hover {
@@ -347,6 +350,7 @@ a:hover {
 .content .info .icon-facebook {
 	font-size: 18px;
 	margin: 5px;
+	display: inline-block;
 }
 
 .content .info .main,
