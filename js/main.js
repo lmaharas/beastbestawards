@@ -7,6 +7,7 @@ $(document).ready(function() {
 
 			navOpenClose();
 			openOverlay();
+			filterContent();
 
 		});
     });
@@ -99,5 +100,23 @@ function facebookLink(el) {
 		console.log(data);
         FB.ui(obj, function(){});
     });
+}
+
+function filterContent() {
+	
+	$(".dropdown li").on('click', function(){
+
+		var contentName = $(this).parent().find('.heading').find('a').attr('href');
+		console.log(contentName);
+
+		$(contentName).isotope({
+			// options
+			itemSelector : 'li',
+			layoutMode : 'fitRows',
+			filter: 'data'
+		});	
+
+	});
+
 }
 

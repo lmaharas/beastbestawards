@@ -2,12 +2,12 @@
 
 <section class="content">
     <div class="overlay"></div>
-    <ul class="twitter clearfix" style="display: none;">
+    <ul class="twitter clearfix">
         {#twitter}
             {>"item"/}            
         {/twitter}
     </ul>
-    <ul class="web clearfix" style="display: none;">
+    <ul class="web clearfix">
         {#web}
             {>"item"/}            
         {/web}

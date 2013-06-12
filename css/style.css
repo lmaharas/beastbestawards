@@ -39,6 +39,7 @@ a:hover {
 	position: fixed;
 	text-transform: uppercase;
 	font-weight: bold;
+	z-index: 110;
 }
 
 .nav a {
@@ -54,12 +55,6 @@ a:hover {
 
 .nav .logo:hover {
 	color: #ee3224;
-}
-
-.nav .logo img {
-	margin-bottom: 5px;
-	width: 82px;
-	padding: 0 10px;
 }
 
 .nav .logo .page-title {
@@ -127,7 +122,8 @@ a:hover {
             transition: all .3s ease-in-out;
 }
 
-.nav .sections .about + .wrapper {	
+.nav .sections .about + .wrapper {
+	display: none;	
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
@@ -144,7 +140,6 @@ a:hover {
        -moz-transition: all .3s ease-in-out;
          -o-transition: all .3s ease-in-out;
             transition: all .3s ease-in-out;
-    z-index: 100;
 }
 
 .nav .sections .about .main {
@@ -206,6 +201,7 @@ a:hover {
 .content .web,
 .content .twitter {
 	overflow: hidden;
+	display: none;
 }
 
 .content li {
@@ -228,7 +224,7 @@ a:hover {
 	width: 150px;
 	height: 150px;
 	color: #000;
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: bold;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);

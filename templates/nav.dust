@@ -43,10 +43,10 @@
                 </a>
             </li>
             <li class="social">	
-            <a class="twitter" target="_blank" 
-                href="https://twitter.com/intent/tweet?url=/{?twitter}twitter{:else}web{/twitter}#{name}&text=Congrats {name} for being named one of @thedailybeast's %23beastBest {?twitter}Twitter accounts{:else}websites{/twitter}!&via=thedailybeast&hashtags=beastBest&related=Newsweek&counturl={url}">
-                <span class="icon-twitter" aria-hidden="true"></span>
-            </a>
+                <a class="twitter" target="_blank" 
+                    href="https://twitter.com/intent/tweet?url=/{#twitter}twitter{:else}web{/twitter}#{name}&text=Congrats {name} for being named one of @thedailybeast's %23beastBest {?twitter}Twitter accounts{:else}websites{/twitter}!&via=thedailybeast&hashtags=beastBest&related=Newsweek&counturl={url}">
+                    <span class="icon-twitter" aria-hidden="true"></span>
+                </a>
             </li>
         </ul>   
     </nav>

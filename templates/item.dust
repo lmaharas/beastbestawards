@@ -1,15 +1,15 @@
-{#items}
+{#items}  
 <li data-category="{category}"> 
     <a class="circle" href="#">
-        <img src="img/{?tweet}twitter{:else}web{/tweet}/{name}.jpg">
-        <h3 class="title">{?twitter}{handle}{:else}{name}{/twitter}{name}</h3>
+        <img src="{imgPath}">
+        <h3 class="title">{?handle}{handle}{:else}{name}{/handle}</h3>
     </a>
     <div class="info">
         <a class="close" href="#"><span class="icon-close-x" aria-hidden="true"></span></a>
         <div class="main">
             <h3 class="title"><a href="{url}" target="_blank">{name}</a></h3>
-            {?twitter}<p class="quote">{tweet}</p>{/twitter}
-            <img class="circle" src="img/{?tweet}twitter/{name}.jpg{:else}web/{name}_home.jpg{/tweet}">
+            {?tweet}<p class="quote">"{tweet}"</p>{/tweet}
+            <img class="circle" src="{?imgPathLg}{imgPathLg}{:else}{imgPath}{/imgPathLg}">
             <p class="text">{blurb}</p>
         </div>
         {>"social"/}

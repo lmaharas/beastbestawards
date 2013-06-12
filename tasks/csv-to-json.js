@@ -25,25 +25,33 @@ module.exports = function (grunt) {
 function prepData(data) {
 
 	if(data.twitter && data.twitter.items) {
-		//normalizeItems(data.twitter.items);
+		normalizeItems(data.twitter.items, 'twitter');
 		data.twitter.categories = getCategories(data.twitter.items);
 	}
 
 	if(data.web && data.web.items) {
-		//normalizeItems(data.web.items);
+		normalizeItems(data.web.items, 'web');
 		data.web.categories = getCategories(data.web.items);
 	}
 }
 
-// function normalizeItems(items) {
-// 	//var stuff = items.replace(" ", "");
+function normalizeItems(items, folderName) {
+	var i, imgName;
+	for(i = 0; i < items.length; i++) {
+		imgName = items[i].name.replace(" ", "").toLowerCase();
 
-// 	return items;
-// }
+		items[i].imgPath = "img/" + folderName + "/" + imgName + ".jpg";
+
+		if (folderName === "web") {
+			items[i].imgPathLg = "img/" + folderName + "/" + imgName + "_home.jpg";
+		}
+	}
+
+}
 
 function getCategories(items) {
-	var set = {}, result = [], i, n, k;
-	for(i = 0, n = items.length; i < n ; i++) {
+	var set = {}, result = [], i, k;
+	for(i = 0; i < items.length; i++) {
 		set[items[i].category] = true;
 	}
 
