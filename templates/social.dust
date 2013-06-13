@@ -1,11 +1,11 @@
 <a class="facebook-link" href="#" 
-    data-link="http://beastbestawards.com/{?twitter}twitter{:else}web{/twitter}#{name}" 
-    data-picture="http://beastbestawards.com/img/{?twitter}twitter/{name}.jpg{:else}web/{name}_home.jpg{/twitter}" 
-    data-name="{name}" 
-    data-description="{name} Named The Daily Beast's 'Beast Best' Website/Twitter Account">
+    data-link="http://beastbestawards.com/{id}" 
+    data-picture="http://beastbestawards.com/{imgPath}" 
+    data-name="{?handle}{handle}{:else}{name}{/handle}" 
+    data-description="{?handle}{handle}{:else}{name}{/handle} Named The Daily Beast's 'Beast Best' {?tweet}Twitter Account{:else}Website{/tweet}">
     <span class="icon-facebook" aria-hidden="true"></span>
 </a>
 <a class="twitter-link" target="_blank" 
-    href="https://twitter.com/intent/tweet?url=/{?twitter}twitter{:else}web{/twitter}#{name}&text=Congrats {name} for being named one of @thedailybeast's %23beastBest {?twitter}Twitter accounts{:else}websites{/twitter}!&via=thedailybeast&hashtags=beastBest&related=Newsweek&counturl={url}">
+    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fbeastbestawards.com/{id}&text=Congrats {?handle}{handle}{:else}{name}{/handle} for being named one of @thedailybeast's %23beastBest {?tweet}Twitter accounts{:else}Websites{/tweet}!&via=thedailybeast&hashtags=beastBest&related=Newsweek&counturl=http://beastbestawards.com/{id}">
     <span class="icon-twitter" aria-hidden="true"></span>
-</a>
+</a> 

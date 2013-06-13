@@ -39,9 +39,6 @@
 
         $overlay.css('visibility', 'visible');
         $overlayItem.css({'visibility': 'visible', 'left': leftMove, 'top': topMove });
-
-        facebookLink($overlayItem);
-
         overlayOpen = true;
     }
 
@@ -53,19 +50,17 @@
         window.location.hash = currentSection;
     }
 
-    function facebookLink($el) {
-        $el.find('.facebook').on('click', function() {
-            var data =  $(this).data(),
-                obj = {
-                    method:'feed',
-                    link: data.link,
-                    picture: data.picture,
-                    name: data.name,
-                    caption:'The Daily Beast',
-                    description: data.description
-                };
-            FB.ui(obj, function(){});
-        });
+    function facebookLink() {
+        var data =  $el.data(),
+            obj = {
+                method:'feed',
+                link: data.link,
+                picture: data.picture,
+                name: data.name,
+                caption:'The Daily Beast',
+                description: data.description
+            };
+        FB.ui(obj, function(){});
     }
 
     function initIsotope() {
@@ -136,6 +131,11 @@
         $('.close').on('click', function(e) {
             e.preventDefault();
             closeOverlay();
+        });
+
+        $('.facebook-link').on('click', function(e) {
+            e.preventDefault();
+            facebookLink();
         });
 
         $(window).on('hashchange', function(){

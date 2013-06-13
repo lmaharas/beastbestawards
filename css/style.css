@@ -312,7 +312,8 @@ a:hover {
             box-sizing: border-box;
 }
 
-.content .info a:hover {
+.content .info a:hover,
+.nav .close:hover {
 	color: #ee3224;
 }
 
@@ -331,7 +332,7 @@ a:hover {
 .content .info .rect {
 	width: 100%;
 	display: inline-block;
-	margin: 20px;
+	margin: 20px 0;
 }
 
 .content .info .close,
