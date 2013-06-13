@@ -369,8 +369,8 @@ a:hover {
 
 .content .info .icon-twitter,
 .content .info .icon-facebook {
-	font-size: 18px;
-	margin: 5px;
+	font-size: 25px;
+	margin: 8px;
 	display: inline-block;
 }
 
@@ -385,22 +385,26 @@ a:hover {
 	margin: 10px 0;
 }
 
-.content .info .quote {
+.content .info .text, .content .info .quote {
 	font-weight: bold;
 	line-height: 1.4;
 	font-size: 16px;
 }
 
+.content .info.section-twitter .text{
+	font-size:18px;
+	line-height:1.2;
+}
 .content .info .quote .twitter-bird {
-	width: 18px;
-	height: 18px;
+	height: 13px;
 	margin-right: 4px;
 }
 
-.content .info .text {
+/*.content .info .text {
 	font-size: 18px;
 	width: 100%;
 	margin: 0 auto;
 	font-family: arial;
 	letter-spacing: 1px;
 }
+*/

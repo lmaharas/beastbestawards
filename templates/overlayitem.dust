@@ -1,4 +1,4 @@
-<div class="info {id}">
+<div class="info {id} section-{section}">
     <a class="close" href="#"><span class="icon-close-x" aria-hidden="true"></span></a>
     <div class="main">
         <h3 class="title"><a href="{url}" target="_blank">{name}</a></h3>

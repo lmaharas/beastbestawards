@@ -135,6 +135,7 @@
         if (parts.length === 3){
             //show item
             openOverlay(hash);
+            hideAbout();
 
         } else if(parts.length >= 1) {
 
@@ -186,10 +187,10 @@
             dust.render("body", data, function(err, out) {
                 $("body").html(out);
 
+                showAbout();
                 bindEvents();
                 initIsotope();
                 handleHash();
-                showAbout();
             });
         });
     }

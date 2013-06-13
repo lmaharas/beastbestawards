@@ -1,8 +1,8 @@
 <a class="facebook-link" href="#" 
     data-link="http://beastbestawards.com/{id}" 
     data-picture="http://beastbestawards.com/{imgPath}" 
-    data-name="{?handle}{handle}{:else}{name}{/handle}" 
-    data-description="{?handle}{handle}{:else}{name}{/handle} Named The Daily Beast's 'Beast Best' {?tweet}Twitter Account{:else}Website{/tweet}">
+    data-name="{name} named one of The Daily Beast's 'Beast Best' {?tweet}Twitter Account{:else}Website{/tweet}" 
+    data-description="See who else made the cut at BeastBestAwards.com!">
     <span class="icon-facebook" aria-hidden="true"></span>
 </a>
 <a class="twitter-link" target="_blank" 
