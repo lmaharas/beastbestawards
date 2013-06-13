@@ -175,6 +175,7 @@
 
             dust.render("body", data, function(err, out) {
                 $("body").html(out);
+
                 bindEvents();
                 initIsotope();
                 handleHash();

@@ -26,7 +26,7 @@ function prepData(data) {
 
 	if(data.twitter && data.twitter.items) {
 		data.twitter.categories = getCategories(data.twitter.items, 'twitter');
-		// normalizeItems(data.twitter.items, 'twitter');
+		normalizeItems(data.twitter.items, 'twitter');
 	}
 
 	if(data.web && data.web.items) {
