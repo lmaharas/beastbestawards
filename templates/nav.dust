@@ -2,11 +2,11 @@
     <h2 class="tdb"><a href="http://www.thedailybeast.com">The Daily Beast</a></h2>
     <a class="logo" href="#">
         <img src="img/logo.png" alt="Best of The Daily Beast 2013">
-        <h1 class="page-title ir">TDB2013 Best Twitter</h1>
+        <h1 class="page-title ir">Beast Best Awards 2013</h1>
     </a>
 	<nav>
         <ul class="sections">
-            <li><h2 class="heading about"><a href="#about">+ About</a></h2>
+            <li><h2 class="heading about"><a href="#about"><span>+</span> About</a></h2>
                 <div class="wrapper collapse">
                     <a class="close" href="#"><span class="icon-close-x" aria-hidden="true"></span></a>
                     <div class="main">
@@ -16,7 +16,7 @@
                 </div>
             </li>
             <li>
-                <h2 class="web heading"><a href="#web">+ Web</a></h2>
+                <h2 class="web heading"><a href="#web"><span>+</span>Web</a></h2>
                 <ul class="web dropdown collapse">
                     <li><a href="#web">All</a></li>
                     {#web.categories}
@@ -25,7 +25,7 @@
                 </ul>
             </li>
             <li>
-                <h2 class="twitter heading"><a href="#twitter">+ Twitter</a></h2>
+                <h2 class="twitter heading"><a href="#twitter"><span>+</span>Twitter</a></h2>
                 <ul class="twitter dropdown collapse">
                     <li><a href="#twitter">All</a></li>
                     {#twitter.categories}

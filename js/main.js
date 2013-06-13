@@ -61,11 +61,9 @@
                     link: data.link,
                     picture: data.picture,
                     name: data.name,
-                    caption:'Newsweek',
+                    caption:'The Daily Beast',
                     description: data.description
                 };
-
-            console.log(data);
             FB.ui(obj, function(){});
         });
     }
@@ -147,7 +145,8 @@
 
     function loadBody() {
         $.getJSON("data.json", function(data){
-            console.log(data);
+            //console.log(data);
+
             dust.render("body", data, function(err, out) {
                 $("body").html(out);
 
