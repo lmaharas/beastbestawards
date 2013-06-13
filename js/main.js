@@ -106,6 +106,7 @@
             if(overlayOpen) {
                 closeOverlay();
             }
+
             if(aboutOpen)  {
                 hideAbout();
             }
