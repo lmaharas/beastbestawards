@@ -17,7 +17,7 @@
             <li>
                 <h2 class="web heading"><a href="#web"><span>+</span>Web</a></h2>
                 <ul class="web dropdown collapse">
-                    <li><a href="#web">All</a></li>
+                    <li><a class="active" href="#web">All</a></li>
                     {#web.categories}
                         <li><a href="#{id}">{name}</a></li>
                     {/web.categories}
@@ -26,7 +26,7 @@
             <li>
                 <h2 class="twitter heading"><a href="#twitter"><span>+</span>Twitter</a></h2>
                 <ul class="twitter dropdown collapse">
-                    <li><a href="#twitter">All</a></li>
+                    <li><a class="active" href="#twitter">All</a></li>
                     {#twitter.categories}
                         <li><a href="#{id}" data-filter="{name}">{name}</a></li>
                     {/twitter.categories}

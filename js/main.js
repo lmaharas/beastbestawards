@@ -6,9 +6,13 @@
         currentSection = "web";
 
     function showFilters(section) {
-        var $nav = $(".nav");
-        $nav.find(".dropdown").hide();
-        $nav.find('.' + section + '.dropdown').stop().slideToggle(300).toggleClass('collapse');
+        var duration = 300,
+            $nav = $('.nav'),
+            $filter =   $nav.find('.' + section + '.dropdown').filter(':hidden');
+        if($filter.length !== 0) {
+            $nav.find('.dropdown').filter(':visible').slideUp(duration);
+            $filter.stop().slideDown(duration);
+        }
     }
 
     function showAbout() {
@@ -57,8 +61,11 @@
               appId: '475320612543167'
               // channelUrl: '//yourapp.com/channel.html',
             });       
-            $('#loginbutton,#feedbutton').removeAttr('disabled');
-            // FB.getLoginStatus(updateStatusCallback);
+            
+             $('.facebook-link').on('click', function(e) {
+                e.preventDefault();
+                facebookLink($(this));
+            });
           };
         });
     }
@@ -90,6 +97,13 @@
         $el.isotope({ filter: selector });
     }
 
+    function highlightFilter(category) {
+        var $filter = $('.nav a[href=#' + category + ']');
+        if($filter.length !== 0) {
+            $('.nav a.active').removeClass('active');
+            $filter.addClass('active');
+        }
+    }
 
     function switchSection(section) {
         showFilters(section);
@@ -118,9 +132,8 @@
 
             //filter
             filterIsotope($('.content').find('.' + currentSection), hash);
+            highlightFilter(hash); 
         }
-
-
     }
 
     function bindEvents() {
@@ -138,11 +151,7 @@
             hideAbout();
         });
 
-        $('.facebook-link').on('click', function(e) {
-            e.preventDefault();
-            facebookLink($(this));
-        });
-
+    
         $('.heading.about a').on('click', function(e){
             e.preventDefault();
             if(!aboutOpen){

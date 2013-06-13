@@ -184,7 +184,8 @@ a:hover {
 	padding: 5px;
 }
 
-.nav .dropdown a:hover {
+.nav .dropdown a:hover,
+.nav .dropdown a.active {
 	colo: #fff;
 	border: 1px solid #fff;
 	padding: 4px 5px;
