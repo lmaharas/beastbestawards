@@ -50,7 +50,7 @@
         window.location.hash = currentSection;
     }
 
-    function facebookLink() {
+    function facebookLink($el) {
         var data =  $el.data(),
             obj = {
                 method:'feed',
@@ -135,7 +135,7 @@
 
         $('.facebook-link').on('click', function(e) {
             e.preventDefault();
-            facebookLink();
+            facebookLink($(this));
         });
 
         $(window).on('hashchange', function(){
