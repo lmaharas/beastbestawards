@@ -4,10 +4,10 @@
         <img src="img/logo.png" alt="Best of The Daily Beast 2013">
         <h1 class="page-title ir">Beast Best Awards 2013</h1>
     </a>
-	<nav>
+    <nav>
         <ul class="sections">
             <li><h2 class="heading about"><a href="#about">About</a></h2>
-                <div class="wrapper collapse">
+                <div class="about-popup wrapper collapse">
                     <a class="close" href="#"><span class="icon-close-x" aria-hidden="true"></span></a>
                     <div class="main">
                         <p>The Internet is infinite, but your time isn't. To help you surf wisely, The Daily Beast picked the most relevant, entertaining, original, and--in some cases--overlooked websites and Twitter feeds. Read them, skip the rest.</p>

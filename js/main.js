@@ -2,7 +2,7 @@
     "use strict";
 
     var overlayOpen = false,
-        aboutOpen = false,
+        aboutOpen = true,
         currentSection = "web";
 
     function showFilters(section) {
@@ -47,7 +47,20 @@
         $('.overlay').css('visibility', 'hidden');
         overlayOpen = false;
 
-        window.location.hash = currentSection;
+        // window.location.hash = currentSection;
+    }
+    function fbInit(){
+        $.ajaxSetup({ cache: true });
+        $.getScript('//connect.facebook.net/en_US/all.js', function(){
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId: '475320612543167'
+              // channelUrl: '//yourapp.com/channel.html',
+            });       
+            $('#loginbutton,#feedbutton').removeAttr('disabled');
+            // FB.getLoginStatus(updateStatusCallback);
+          };
+        });
     }
 
     function facebookLink($el) {
@@ -85,41 +98,28 @@
 
 
     function handleHash() {
-        var hash = window.location.hash.substr(1), parts;
-        if(hash === "about") {
-            if(overlayOpen) {
-                closeOverlay();
-            }
-            if(!aboutOpen)  {
-                showAbout();
-            }
-        } else {
-            parts = hash.split('-');
+        var hash = window.location.hash ? window.location.hash.substr(1) : currentSection, parts;
+        parts = hash.split('-');
 
-            if(overlayOpen) {
-                closeOverlay();
-            }
-
-            if(aboutOpen)  {
-                hideAbout();
-            }
-
-            if(parts.length >= 1) {
-                currentSection = parts[0];
-                switchSection(currentSection);
-            }
-
-            if (parts.length === 3){
-                //show item
-                openOverlay(hash);
-            } else if(parts.length >= 1) {
-
-                //filter
-                filterIsotope($('.content').find('.' + currentSection), hash);
-            }
-
-
+        if(overlayOpen) {
+            closeOverlay();
         }
+
+
+        if(parts.length >= 1) {
+            currentSection = parts[0];
+            switchSection(currentSection);
+        }
+
+        if (parts.length === 3){
+            //show item
+            openOverlay(hash);
+        } else if(parts.length >= 1) {
+
+            //filter
+            filterIsotope($('.content').find('.' + currentSection), hash);
+        }
+
 
     }
 
@@ -128,9 +128,14 @@
             closeOverlay();
         });
 
-        $('.close').on('click', function(e) {
+        $('.info .close').on('click', function(e) {
             e.preventDefault();
             closeOverlay();
+        });
+
+        $('.about-popup .close').on('click', function(e) {
+            e.preventDefault();
+            hideAbout();
         });
 
         $('.facebook-link').on('click', function(e) {
@@ -138,21 +143,33 @@
             facebookLink($(this));
         });
 
+        $('.heading.about a').on('click', function(e){
+            e.preventDefault();
+            if(!aboutOpen){
+                showAbout();
+            }else{
+                hideAbout();
+            }
+        });
+
+
+
         $(window).on('hashchange', function(){
             handleHash();
         });
     }
 
     function loadBody() {
+        fbInit();
         $.getJSON("data.json", function(data){
             //console.log(data);
 
             dust.render("body", data, function(err, out) {
                 $("body").html(out);
-
                 bindEvents();
                 initIsotope();
                 handleHash();
+                showAbout();
             });
         });
     }

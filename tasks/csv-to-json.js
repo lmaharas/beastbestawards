@@ -1,5 +1,5 @@
 var csv = require("csv"),
-	whitelist = [ "handle", "name", "url", "blurb", "category", "tweet" ];
+	whitelist = [ "section", "handle", "name", "url", "blurb", "category", "tweet" ];
 
 module.exports = function (grunt) {
 	grunt.registerTask('csv-to-json', 'Build the zone files.', function () {
@@ -26,7 +26,7 @@ function prepData(data) {
 
 	if(data.twitter && data.twitter.items) {
 		data.twitter.categories = getCategories(data.twitter.items, 'twitter');
-		normalizeItems(data.twitter.items, 'twitter');
+		// normalizeItems(data.twitter.items, 'twitter');
 	}
 
 	if(data.web && data.web.items) {

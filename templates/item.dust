@@ -2,7 +2,6 @@
 <li class="bubble {categoryId}"> 
     <a class="circle" href="#{id}">
         <img src="{imgPath}">
-        <h3 class="title">{?handle}{handle}{:else}{name}{/handle}</h3>
     </a>
 </li>
 {/items}
