@@ -369,9 +369,14 @@ a:hover {
 }
 
 .content .info .quote {
-	text-transform: uppercase;
 	font-weight: bold;
 	line-height: 1.4;
+}
+
+.content .info .quote .twitter-bird {
+	width: 18px;
+	height: 18px;
+	margin-right: 4px;
 }
 
 .content .info .text {
