@@ -32,7 +32,7 @@ a:hover {
 .nav {
 	background-color: #000;
 	color: #fff;
-	width: 102px;
+	width: 110px;
 	height: 100%;
 	min-height: 500px;
 	text-align: center;
@@ -49,7 +49,7 @@ a:hover {
 
 .nav .logo {
 	display: block;
-	margin: 20px 0;
+	margin: 10px 0;
 	text-align: center;
 }
 
@@ -112,6 +112,7 @@ a:hover {
 	padding: 5px 0;
 }
 
+
 .nav .sections .heading a,
 .nav .sections .about a {
 	position: relative;
@@ -122,6 +123,17 @@ a:hover {
             transition: all .3s ease-in-out;
 }
 
+.nav .sections .about a {
+	color: #FFF;
+	font-weight: bold;
+	border: 1px solid #FFF;
+	margin-bottom:25px;
+}
+
+.section li.social:first-child{
+	margin-top:205px;
+}
+
 .nav .wrapper {
 	display: none;	
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -129,7 +141,7 @@ a:hover {
 	position: absolute;
 	background: #000;
 	padding: 20px;
-	width: 345px;
+	width: 195px;
 	left: 112px;
 	top: 10px;
 	text-transform: none;

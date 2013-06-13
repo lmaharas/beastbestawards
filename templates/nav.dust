@@ -6,12 +6,11 @@
     </a>
 	<nav>
         <ul class="sections">
-            <li><h2 class="heading about"><a href="#about"><span>+</span> About</a></h2>
+            <li><h2 class="heading about"><a href="#about">About</a></h2>
                 <div class="wrapper collapse">
                     <a class="close" href="#"><span class="icon-close-x" aria-hidden="true"></span></a>
                     <div class="main">
-                        <p>Our picks for the Web and Twitter each span more than a dozen categories, listing nearly 200 feeds to follow and sites to bookmark. They are presented in no particular order.</p>
-                        <p>To create the list, we devised a master inventory of newsroom favorites that were remarkable for their utility, entertainment value or innovation. We then whittled the list, keeping only the best based on three qualities: relevance, consistency and originality.</p>
+                        <p>The Internet is infinite, but your time isn't. To help you surf wisely, The Daily Beast picked the most relevant, entertaining, original, and--in some cases--overlooked websites and Twitter feeds. Read them, skip the rest.</p>
                     </div>
                 </div>
             </li>
