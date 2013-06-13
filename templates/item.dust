@@ -1,7 +1,7 @@
 {#items} 
 <li class="bubble {categoryId}"> 
     <a class="circle" href="#{id}">
-        <img src="{imgPath}">
+       
     </a>
 </li>
 {/items}

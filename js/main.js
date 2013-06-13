@@ -3,7 +3,7 @@
 
     var overlayOpen = false,
         aboutOpen = true,
-        currentSection = "web";
+        currentState = "web";
 
     function showFilters(section) {
         var duration = 300,
@@ -51,8 +51,9 @@
         $('.overlay').css('visibility', 'hidden');
         overlayOpen = false;
 
-        // window.location.hash = currentSection;
+        window.location.hash = currentState;
     }
+
     function fbInit(){
         $.ajaxSetup({ cache: true });
         $.getScript('//connect.facebook.net/en_US/all.js', function(){
@@ -95,6 +96,8 @@
         var selector = '.' + category;
         selector = selector === '.web' || selector === '.twitter' ? '*' : selector;
         $el.isotope({ filter: selector });
+
+        console.log(selector);
     }
 
     function highlightFilter(category) {
@@ -112,8 +115,10 @@
 
 
     function handleHash() {
-        var hash = window.location.hash ? window.location.hash.substr(1) : currentSection, parts;
-        parts = hash.split('-');
+        var separator = '-',
+        hash = window.location.hash ? window.location.hash.substr(1) : currentState,
+        parts = hash.split(separator), 
+        section;
 
         if(overlayOpen) {
             closeOverlay();
@@ -121,18 +126,24 @@
 
 
         if(parts.length >= 1) {
-            currentSection = parts[0];
-            switchSection(currentSection);
+            section = parts[0];
+            switchSection(section);
         }
+
+        
 
         if (parts.length === 3){
             //show item
             openOverlay(hash);
+
+            currentState = parts[0] + separator + parts[1];
         } else if(parts.length >= 1) {
 
             //filter
-            filterIsotope($('.content').find('.' + currentSection), hash);
-            highlightFilter(hash); 
+            filterIsotope($('.content').find('.' + section), hash);
+            highlightFilter(hash);
+
+            currentState = hash; 
         }
     }
 
