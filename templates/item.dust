@@ -1,6 +1,8 @@
 {#items} 
 <li class="bubble {categoryId}"> 
     <a class="circle" href="#{id}">
+        <img src="{imgPath}">
+        <h3 class="title">{@eq key=section value="twitter"}{handle}{:else}{name}{/eq}</h3>
        
     </a>
 </li>

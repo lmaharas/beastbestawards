@@ -136,7 +136,6 @@
             //show item
             openOverlay(hash);
 
-            currentState = parts[0] + separator + parts[1];
         } else if(parts.length >= 1) {
 
             //filter

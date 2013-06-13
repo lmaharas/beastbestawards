@@ -44,10 +44,12 @@ function normalizeItems(items, folderName) {
 		item.imgPath = "img/" + folderName + "/" + imgName + ".jpg";
 
 		if (folderName === "web") {
-			item.imgPathLg = "img/" + folderName + "/" + imgName + "_home.jpg";
+			item.imgPathLg = "img/" + folderName + "/saved_for_web/JPEG/" + imgName + "_home.jpg";
 		}
 
-        categoryId = getCategoryId(item.category, folderName);
+
+
+    categoryId = getCategoryId(item.category, folderName);
 		item.id =  categoryId + "-" + imgName;
 
 		item.categoryId = categoryId;
