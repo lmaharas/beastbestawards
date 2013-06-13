@@ -49,7 +49,7 @@ a:hover {
 
 .nav .logo {
 	display: block;
-	margin: 10px 0;
+	margin: 10px 0 20px 0;
 	text-align: center;
 }
 
@@ -84,12 +84,14 @@ a:hover {
 	width: 100%;
     padding: 0;
 }
+.nav .sections .social{
+		margin: 5px 0;
+}
 
 .nav .sections .social,
 .nav .sections .social:hover {
 	border: none;
 	background-color: transparent;
-	margin: 5px 0;
 	padding: 0;
     -webkit-transition: all .3s ease-in-out;
        -moz-transition: all .3s ease-in-out;
@@ -105,6 +107,10 @@ a:hover {
        -moz-transition: all .3s ease-in-out;
          -o-transition: all .3s ease-in-out;
             transition: all .3s ease-in-out;
+}
+
+.nav .sections .first-social{
+	margin-top:25px;
 }
 
 .nav .tdb a,
@@ -130,9 +136,7 @@ a:hover {
 	margin-bottom:25px;
 }
 
-.section li.social:first-child{
-	margin-top:205px;
-}
+
 
 .nav .wrapper {
 	display: none;	
