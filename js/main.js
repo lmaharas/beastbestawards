@@ -50,8 +50,6 @@
         $('.info').css('visibility', 'hidden');
         $('.overlay').css('visibility', 'hidden');
         overlayOpen = false;
-
-        window.location.hash = currentState;
     }
 
     function fbInit(){
@@ -96,8 +94,6 @@
         var selector = '.' + category;
         selector = selector === '.web' || selector === '.twitter' ? '*' : selector;
         $el.isotope({ filter: selector });
-
-        console.log(selector);
     }
 
     function highlightFilter(category) {
@@ -150,11 +146,13 @@
     function bindEvents() {
         $('.overlay').on('click', function() {
             closeOverlay();
+            window.location.hash = currentState;
         });
 
         $('.info .close').on('click', function(e) {
             e.preventDefault();
             closeOverlay();
+            window.location.hash = currentState;
         });
 
         $('.about-popup .close').on('click', function(e) {
@@ -167,7 +165,7 @@
             e.preventDefault();
             if(!aboutOpen){
                 showAbout();
-            }else{
+            } else {
                 hideAbout();
             }
         });
