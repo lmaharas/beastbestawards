@@ -1,5 +1,6 @@
 var csv = require("csv"),
-	whitelist = [ "section", "handle", "name", "url", "blurb", "category", "tweet" ];
+	whitelist = [ "section", "handle", "name", "url", "blurb", "category", "tweet" ],
+	autocomplete_list = [];
 
 module.exports = function (grunt) {
 	grunt.registerTask('csv-to-json', 'Build the zone files.', function () {
@@ -51,13 +52,16 @@ function normalizeItems(items, folderName) {
 			item.imgPathLg = "img/" + folderName + "/saved_for_web/" + imgName + "_home.png";
 		}
 
-
-
     categoryId = getCategoryId(item.category, folderName);
 		item.id =  categoryId + "-" + imgName;
 
 		item.categoryId = categoryId;
-		delete item.category;
+
+		var obj = {
+			label: item.name + ', ' + item.handle,
+			link: item.id
+		}
+		autocomplete_list.push(obj);
 	}
 
 }
@@ -94,7 +98,6 @@ function parseCSV (file, obj, fileDone, grunt) {
 
 	var records = [];
 
-
 	grunt.log.writeln("Parsing CSV: " + file);
 
 	csv().from(file, { columns: true })
@@ -115,6 +118,7 @@ function parseCSV (file, obj, fileDone, grunt) {
 		records.push(filtered);
 	}).on("end",function(){
 		obj[getPropertyName(file)] = { items: records };
+		obj['autocomplete'] = autocomplete_list;
 		fileDone(file);
 	});
 }

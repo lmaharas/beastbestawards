@@ -13,9 +13,12 @@
                         <p>The Internet is infinite, but your time isn't. To help you surf wisely, The Daily Beast picked the most relevant, entertaining, original, and&mdash;in some cases&mdash;overlooked websites and Twitter feeds. Read them, skip the rest.</p>
                     </div>
                 </div>
+            </li>            
+            <li>
+                <input class="search-field search-field-active" type="textfield" title="Search..."/>
             </li>
             <li>
-                <h2 class="web heading"><a href="#web"><span>+</span>Web</a></h2>
+                <h2 class="web heading"><a href="#web">Web</a></h2>
                 <ul class="web dropdown collapse">
                     <li><a class="active" href="#web">All</a></li>
                     {#web.categories}
@@ -24,7 +27,7 @@
                 </ul>
             </li>
             <li>
-                <h2 class="twitter heading"><a href="#twitter"><span>+</span>Twitter</a></h2>
+                <h2 class="twitter heading"><a href="#twitter">Twitter</a></h2>
                 <ul class="twitter dropdown collapse">
                     <li><a class="active" href="#twitter">All</a></li>
                     {#twitter.categories}

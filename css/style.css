@@ -64,6 +64,15 @@ a:hover {
 .nav .sections .heading {
 	font-size: 14px;
 }
+.nav .sections .web.heading, .nav .sections .twitter.heading {
+	border-top: 1px dotted #ccc;
+	border-bottom: 1px dotted #ccc;
+	width:85%;
+	margin: 0 auto 8px auto;
+}
+.nav .sections .web.heading a, .nav .sections .twitter.heading a{
+	padding:3px;
+}
 
 .nav .tdb a:hover {
 	color: #000;
@@ -122,6 +131,7 @@ a:hover {
 .nav .sections .heading a,
 .nav .sections .about a {
 	position: relative;
+	letter-spacing: 2px;
 	color: #fff;
     -webkit-transition: all .3s ease-in-out;
        -moz-transition: all .3s ease-in-out;
@@ -129,13 +139,16 @@ a:hover {
             transition: all .3s ease-in-out;
 }
 
-.nav .sections .about a {
+.nav .sections .search a,.nav .sections .about a {
 	color: #FFF;
 	font-weight: bold;
-	border: 1px solid #FFF;
-	margin-bottom:25px;
+	/*border: 1px solid #FFF;*/
+	margin-bottom:10px;
 }
 
+.nav .sections .search a{
+	margin-bottom:25px;
+}
 
 
 .nav .wrapper {
@@ -184,9 +197,13 @@ a:hover {
 	padding: 5px;
 }
 
-.nav .dropdown a:hover,
-.nav .dropdown a.active {
-	colo: #fff;
+.nav .dropdown li:hover{
+	cursor:pointer;
+	cursor:hand;
+}
+.nav .dropdown li:hover a,
+.nav .dropdown li a.active {
+	color: #fff;
 	border: 1px solid #fff;
 	padding: 4px 5px;
     -webkit-box-sizing: border-box;
@@ -340,6 +357,9 @@ a:hover {
 	width: 255px;
 	height: 255px;
 	display: inline-block;
+	box-shadow: 0 0 32px #CCC;
+	-moz-box-shadow: 0 0 32px #CCC;
+	-webkit-box-shadow: 0 0 32px #CCC;
 	margin: 20px;	
     -webkit-border-radius: 255px;
        -moz-border-radius: 255px;
@@ -407,13 +427,23 @@ a:hover {
 }
 
 .main h3 a{
-	text-decoration: underline;
+	border-bottom: 1px dotted #000;
 }
-/*.content .info .text {
-	font-size: 18px;
-	width: 100%;
-	margin: 0 auto;
-	font-family: arial;
-	letter-spacing: 1px;
+.main h3 a:hover{
+	color:#ee3224;
 }
-*/
+.search-field{
+	width:65%;
+	margin-bottom:25px;
+}
+
+.search-field{
+	color:black;
+}
+
+.search-field-active { 
+	color: #848484; 
+}
+.ui-autocomplete{
+	z-index:999999;
+}
