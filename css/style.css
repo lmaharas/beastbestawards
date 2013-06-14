@@ -348,7 +348,7 @@ a:hover {
 
 .content .info a:hover,
 .nav .close:hover {
-	color: #ee3224;
+	color: #ee3224 !important;
 }
 
 
@@ -430,7 +430,7 @@ a:hover {
 	border-bottom: 1px dotted #000;
 }
 .main h3 a:hover{
-	color:#ee3224;
+	color:#ee3224 !important;
 }
 .search-field{
 	width:65%;
