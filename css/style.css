@@ -382,7 +382,7 @@ a:hover {
 
 .content .info .title {
 	font-size: 24px;
-	margin: 10px 0;
+	margin: 5px 0 10px 0;
 }
 
 .content .info .text, .content .info .quote {
@@ -400,6 +400,15 @@ a:hover {
 	margin-right: 4px;
 }
 
+.item-rubric{
+	font-family:"TitlingGothicFBMediumComp","Arial Narrow",Arial,sans-serif;
+	text-align: center;
+	font-size: 16px;
+}
+
+.main h3 a{
+	text-decoration: underline;
+}
 /*.content .info .text {
 	font-size: 18px;
 	width: 100%;

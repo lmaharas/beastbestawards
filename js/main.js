@@ -117,7 +117,7 @@
         section;
 
         if(overlayOpen) {
-            closeOverlay();
+            // closeOverlay();
         }
 
 
@@ -143,10 +143,15 @@
         }
     }
 
+    var isLink = false;
     function bindEvents() {
         $('.overlay').on('click', function() {
             closeOverlay();
             window.location.hash = currentState;
+        });
+
+        $('.info').on('click', function(e){
+            e.stopPropagation();
         });
 
         $('.info .close').on('click', function(e) {
@@ -170,19 +175,42 @@
             }
         });
 
+        $('.logo').on('click', function(e){
+            showAbout();
+        });
+
+        $('.twitter-link').on('click', function(e){
+            e.preventDefault();
+            var href = $(this).attr('href');
+            var leftPos = e.pageX + 400;
+            var topPos = e.pageY;
+            var settings = 'width=500,height=400,top=' + topPos + ',left=' + leftPos + ',scrollbars=no,location=0,statusbars=0,menubars=0,toolbars=0,resizable=0';
+            
+            window.open(href, 'Tweet', settings)
+        });
 
 
         $(window).on('hashchange', function(){
             handleHash();
         });
     }
+    // function dustHelpers(){
+    //     dust.helpers.formatCategory = function (chunk, context, bodies, params) {
+    //         var str = dust.helpers.tap(params.str, chunk, context);
+    //         console.log(str)
+    //         // return chunk.write(date + '.' + month + '.' + year);
+    //     };
+
+    // }
 
     function loadBody() {
         fbInit();
         $.getJSON("data.json", function(data){
             //console.log(data);
 
+            // dustHelpers();
             dust.render("body", data, function(err, out) {
+
                 $("body").html(out);
 
                 showAbout();

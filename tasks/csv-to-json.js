@@ -41,10 +41,14 @@ function normalizeItems(items, folderName) {
 		item = items[i];
 		imgName = item.name.toLowerCase().replace(/[^a-z0-9]/g, "");
 
-		item.imgPath = "img/" + folderName + "/" + imgName + ".jpg";
+		if (imgName == 'jennawortham' || imgName == 'andrewwk'){
+			item.imgPath = "img/" + folderName + "/saved_for_web/" + imgName + ".gif";
+		}else{
+			item.imgPath = "img/" + folderName + "/saved_for_web/" + imgName + ".jpg";
+		}
 
 		if (folderName === "web") {
-			item.imgPathLg = "img/" + folderName + "/saved_for_web/JPEG/" + imgName + "_home.jpg";
+			item.imgPathLg = "img/" + folderName + "/saved_for_web/" + imgName + "_home.png";
 		}
 
 
