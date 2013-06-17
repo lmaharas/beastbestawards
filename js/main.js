@@ -751,14 +751,20 @@
             leftMove = overlayWidth/2 - infoWidth/2,
             topMove = windowHeight/2 - infoHeight/ 2,
             $overlay = $('.content').find('.overlay'),
-            $overlayItem = $overlay.find('.' + overlayId);
+            $overlayItem = $overlay.find('.' + overlayId),
+            $img_placeholder = $overlayItem.find('.img-placeholder'),
+            img_src = $img_placeholder.data('src'),
+            img_shape = $img_placeholder.data('shape');
 
+        var item_img = '<img class="added-detail-img '+img_shape+'" src="'+img_src+'" />'
+        $img_placeholder.after(item_img);
         $overlay.css('visibility', 'visible');
         $overlayItem.css({'visibility': 'visible', 'left': leftMove, 'top': topMove });
         overlayOpen = true;
     }
 
     function closeOverlay() {
+        $('.added-detail-img').remove();
         $('.info').css('visibility', 'hidden');
         $('.overlay').css('visibility', 'hidden');
         overlayOpen = false;
