@@ -351,8 +351,9 @@ a:hover {
 
 /* info */
 .content .info {
-	position: fixed;
+	position: relative;
 	height: 500px;
+	margin:0 auto;
 	width: 380px;
 	text-align: center;
 	z-index: 110;

@@ -773,7 +773,7 @@
             leftMove = overlayWidth/2 - infoWidth/2,
             topMove = windowHeight/2 - infoHeight/ 2;
 
-        $overlayItem.css({'display': 'block', 'left': leftMove, 'top': topMove });
+        $overlayItem.css({'display': 'block', 'top': topMove });
         $overlay.css('display', 'block');
         $overlayItem.addClass('three-deeee');
         overlayOpen = true;
