@@ -1,11 +1,11 @@
 <a class="facebook-link" href="#" 
-    data-link="http://beastbestawards.thedailybeast.com/#{id}" 
+    data-link="http://beastbestawards.com/#{id}" 
     data-picture="http://beastbestawards.thedailybeast.com/{imgPath}" 
     data-name="{name} named one of The Daily Beast's 'Beast Best' {?tweet}Twitter accounts{:else}websites{/tweet}" 
     data-description="See who else made the cut at BeastBestAwards.com!">
     <span class="icon-facebook" aria-hidden="true"></span>
 </a>
 <a class="twitter-link" target="_blank" 
-    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fbeastbestawards.thedailybeast.com/%23{id}&text=Congrats {?handle}{handle}{:else}{name}{/handle} for being named one of @thedailybeast's %23beastbest {?tweet}Twitter accounts{:else}websites{/tweet}!&related=Newsweek&counturl=http://beastbestawards.thedailybeast.com/%23{id}">
+    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fbeastbestawards.com/%23{id}&text=Congrats {?handle}{handle}{:else}{name}{/handle} for being named one of @thedailybeast's %23beastbest {?tweet}Twitter accounts{:else}websites{/tweet}!&related=Newsweek&counturl=http://beastbestawards.com/%23{id}">
     <span class="icon-twitter" aria-hidden="true"></span>
 </a> 
