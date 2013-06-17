@@ -746,6 +746,7 @@
         if(section == 'all'){
             $content.find('.twitter').show();
             $content.find('.web').show();
+            window.scrollTo(0);
         }else{
             $content.find("ul").hide();
             $content.find('.' + section).show();
