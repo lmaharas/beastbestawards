@@ -901,6 +901,14 @@
             window.open(href, 'Tweet', settings)
         });
 
+        $('.heading.web a').click(function(){
+            $('.first-social').addClass('social-buffer');
+        });
+
+        $('.heading.twitter a').click(function(){
+            $('.first-social').removeClass('social-buffer');
+        })
+
 
         $(window).on('hashchange', function(){
             handleHash();

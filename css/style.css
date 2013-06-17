@@ -118,7 +118,10 @@ a:hover {
 }
 
 .nav .sections .first-social{
-	margin-top:15px;
+	position:relative;
+}
+.social-buffer{
+	top:20px;
 }
 
 .nav .tdb a,
@@ -142,7 +145,7 @@ a:hover {
 	color: #FFF;
 	font-weight: bold;
 	/*border: 1px solid #FFF;*/
-	margin-bottom:10px;
+	margin-bottom:5px;
 }
 
 .nav .sections .search a{
@@ -159,7 +162,7 @@ a:hover {
 	padding: 20px;
 	width: 200px;
 	left: 113px;
-	top: 3px;
+	top: -153px;
 	text-transform: none;
 	font-size: 16px;
 	line-height: 1.5;
@@ -189,6 +192,8 @@ a:hover {
 
 .nav .sections {
 	margin-bottom: 10px;
+	position: relative;
+	top: -3px;
 }
 
 .nav .sections a {
@@ -433,7 +438,7 @@ a:hover {
 }
 .search-field{
 	width:65%;
-	margin-bottom:25px;
+	margin-bottom:15px;
 }
 
 .search-field{

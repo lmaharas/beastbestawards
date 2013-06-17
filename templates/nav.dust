@@ -35,7 +35,7 @@
                     {/twitter.categories}
                 </ul>
             </li>
-            <li class="social first-social"> <!-- TODO: fill out image for facebook -->
+            <li class="social first-social social-buffer"> <!-- TODO: fill out image for facebook -->
                 <a class="facebook-link" href="#" 
                     data-link="http://beastbestawards.com" 
                     data-picture="http://beastbestawards.com/img/bestofweb.jpg" 
