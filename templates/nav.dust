@@ -43,12 +43,12 @@
                     data-description="The Daily Beast selects the best websites and Twitter accounts in the 2013 Beast Best Awards.">
                     <span class="icon-facebook" aria-hidden="true"></span>
                 </a>
-            </li>
-            <li class="social">
                 <a class="twitter-link" target="_blank" 
                     href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fbeastbestawards.com&text=Check out The Daily Beast's 2013 %23BeastBest Awards! These are the best websites ->&via=thedailybeast&hashtags=beastBest&related=Newsweek&counturl=http://beastbestawards.com">
                     <span class="icon-twitter" aria-hidden="true"></span>
                 </a>
+            </li>
+            <li class="social">
             </li>
         </ul>   
     </nav>

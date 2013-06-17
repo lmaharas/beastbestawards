@@ -107,7 +107,7 @@ a:hover {
             transition: all .3s ease-in-out;
 }
 
-.nav .sections .social:hover a,
+.nav .sections .social a:hover,
 .nav .sections > li .heading:hover a,
 .nav .sections > li .heading.active a {
 	color: #ee3224;
