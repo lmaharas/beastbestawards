@@ -119,7 +119,7 @@ a:hover {
 }
 
 .nav .sections .social a:hover,
-.nav .sections > li .heading:hover a,
+.nav .sections > li .heading a:hover,
 .nav .sections > li .heading.active a {
 	color: #ee3224;
     -webkit-transition: all .3s ease-in-out;
@@ -336,7 +336,7 @@ a:hover {
 /*overlay*/
 .content .overlay,
 .content .info {
-	visibility: hidden;
+	display: none;
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -461,4 +461,16 @@ a:hover {
 }
 .ui-autocomplete{
 	z-index:999999;
+}
+.img-placeholder{
+	width: 380px;
+	height:300px;
+}
+.img-placeholder img{
+	width:380px;
+	height:275px;
+}
+.three-deeee{
+		-webkit-transform: scale3d(1,1,1);
+	
 }

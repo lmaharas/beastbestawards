@@ -746,27 +746,33 @@
     function openOverlay(overlayId) {
         var overlayWidth = $('.overlay').width(),
             windowHeight = $(window).height(),
-            infoWidth = $('.info').width(),
-            infoHeight = $('.info').height(),
-            leftMove = overlayWidth/2 - infoWidth/2,
-            topMove = windowHeight/2 - infoHeight/ 2,
             $overlay = $('.content').find('.overlay'),
             $overlayItem = $overlay.find('.' + overlayId),
             $img_placeholder = $overlayItem.find('.img-placeholder'),
             img_src = $img_placeholder.data('src'),
             img_shape = $img_placeholder.data('shape');
 
-        var item_img = '<img class="added-detail-img '+img_shape+'" src="'+img_src+'" />'
-        $img_placeholder.after(item_img);
-        $overlay.css('visibility', 'visible');
-        $overlayItem.css({'visibility': 'visible', 'left': leftMove, 'top': topMove });
+        var item_img = '<img width="380" height="275" class="added-detail-img '+img_shape+'" src="'+img_src+'" />'
+        var image = new Image();
+            image.src = img_src;
+
+        $img_placeholder.html(item_img);
+
+        var infoWidth = $('.info').width(),
+            infoHeight = $('.info').height(),
+            leftMove = overlayWidth/2 - infoWidth/2,
+            topMove = windowHeight/2 - infoHeight/ 2;
+
+        $overlayItem.css({'display': 'block', 'left': leftMove, 'top': topMove });
+        $overlay.css('display', 'block');
+        $overlayItem.addClass('three-deeee')
         overlayOpen = true;
     }
 
     function closeOverlay() {
         $('.added-detail-img').remove();
-        $('.info').css('visibility', 'hidden');
-        $('.overlay').css('visibility', 'hidden');
+        $('.info').css('display', 'none');
+        $('.overlay').css('display', 'none');
         overlayOpen = false;
     }
 
