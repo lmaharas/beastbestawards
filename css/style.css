@@ -49,7 +49,6 @@ a:hover {
 
 .nav .logo {
 	display: block;
-	margin: 10px 0 20px 0;
 	text-align: center;
 }
 
@@ -119,7 +118,7 @@ a:hover {
 }
 
 .nav .sections .first-social{
-	margin-top:25px;
+	margin-top:15px;
 }
 
 .nav .tdb a,
