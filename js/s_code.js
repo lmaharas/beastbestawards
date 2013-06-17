@@ -2,7 +2,7 @@
 Copyright 1996-2012 Adobe, Inc. All Rights Reserved
 More info available at http://www.omniture.com */
 
-var s_account="rtstdailybeast";
+var s_account="rtstdailybeast,rtstglobal";
 var s=s_gi(s_account);
 
 /* Turn on and configure debugging here */
