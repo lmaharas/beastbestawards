@@ -12,7 +12,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)
 </script>
 
 <script type="text/javascript">
-    var _sf_async_config = {uid:20421,domain:"thedailybeast.com",sections:"{#tags}{name}{@sep},{/sep}{/tags}",authors:"{#authors}{name}{@sep},{/sep}{/authors}",useCanonical:true, path:"{id}.html"};
+    var _sf_async_config = {uid:20421,domain:"thedailybeast.com",useCanonical:true, path:"beastbestawards.html"};
     (function() {
         function loadChartbeat() {
             window._sf_endpt = (new Date()).getTime();
