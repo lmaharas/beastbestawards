@@ -21,6 +21,5 @@
         {/twitter}
     </ul>
 </section>
-
 {>"facebook"/}
 {>"analytics"/}  

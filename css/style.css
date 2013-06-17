@@ -249,7 +249,7 @@ a:hover {
 .content {
 	position: relative;
 	margin-left: 102px;  /* width = nav width */
-	padding: 4% 0 4% 4%;
+	padding: 4% 0 11% 4%;
 }
 
 .content .web,
@@ -472,5 +472,13 @@ a:hover {
 }
 .three-deeee{
 		-webkit-transform: scale3d(1,1,1);
-	
+}
+.the-credits{
+	position: relative;
+	left:150px;
+}
+.credit-text{
+	position:absolute;
+	bottom:0;
+	width:750px;
 }

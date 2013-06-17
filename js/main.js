@@ -982,6 +982,11 @@
         });
 
     }
+    // function stickCreditsToBottom(){
+    //     var h = $(window).height();
+    //     var c = '<div style="height:'+h+'px;" class="the-credits"><div class="credit-text"><p><strong>Credits</strong>: Research by Lauren Streib; Design by Bronson Stamp; Built by Lynn Maharas, Andrew Sprouse & Michael Keller.</p></div></div>';
+    //     $('body').append(c);
+    // }
 
     function loadBody() {
         fbInit();
@@ -997,6 +1002,7 @@
                 bindEvents();
                 initIsotope();
                 handleHash();
+                // stickCreditsToBottom();
             });
         });
     }

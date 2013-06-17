@@ -11,6 +11,21 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)
 }, 1);
 </script>
 
+<script type="text/javascript">
+    var _sf_async_config = {uid:20421,domain:"thedailybeast.com",sections:"{#tags}{name}{@sep},{/sep}{/tags}",authors:"{#authors}{name}{@sep},{/sep}{/authors}",useCanonical:true, path:"{id}.html"};
+    (function() {
+        function loadChartbeat() {
+            window._sf_endpt = (new Date()).getTime();
+            var e = document.createElement('script');
+            e.type = 'text/javascript';
+            e.src = (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") + "static.chartbeat.com/js/chartbeat_pub.js";
+            document.body.appendChild(e);
+        }
+        var oldonload = window.onload;
+        window.onload = (typeof window.onload != 'function') ?
+                loadChartbeat : function() { oldonload(); loadChartbeat();};
+    })();
+</script>
 
 <!-- SiteCatalyst -->
 <script language="JavaScript" type="text/javascript" src="js/s_code.js"></script>
@@ -23,7 +38,7 @@ if (s_code)document.write(s_code)//--></script>
 <script language="JavaScript" type="text/javascript"><!--
 if (navigator.appVersion.indexOf('MSIE') >= 0)document.write(unescape('%3C') + '\!-' + '-')
 //--></script>
-<noscript><img src="http://rtst.122.2o7.net/b/ss/rtstinteractive/1/H.26--NS/0"
+<noscript><img src="http://rtst.122.2o7.net/b/ss/rtstdailybeast/1/H.26--NS/0"
                height="1" width="1" border="0" alt=""/></noscript>
 <!--/DO NOT REMOVE/-->
 <!-- End SiteCatalyst code version: H.26.0. -->
