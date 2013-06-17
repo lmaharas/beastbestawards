@@ -6,6 +6,19 @@
     </a> 
     <nav>
         <ul class="sections">
+            <li class="social first-social"> <!-- TODO: fill out image for facebook -->
+                <a class="facebook-link" href="#" 
+                    data-link="http://beastbestawards.com" 
+                    data-picture="http://beastbestawards.com/img/bestofweb.jpg" 
+                    data-name="The Daily Beast's 2013 Beast Best Awards" 
+                    data-description="The Daily Beast selects the best websites and Twitter accounts in the 2013 Beast Best Awards.">
+                    <span class="icon-facebook" aria-hidden="true"></span>
+                </a>
+                <a class="twitter-link" target="_blank" 
+                    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fbeastbestawards.com&text=Check out @TheDailyBeast's 2013 %23BeastBest Awards for the best Twitter accounts and websites!&related=Newsweek&counturl=http://beastbestawards.com">
+                    <span class="icon-twitter" aria-hidden="true"></span>
+                </a>
+            </li>
             <li><h2 class="heading about"><a href="#about">About</a></h2>
                 <div class="about-popup wrapper collapse">
                     <a class="close" href="#"><span class="icon-close-x" aria-hidden="true"></span></a>
@@ -14,9 +27,6 @@
                     </div>
                 </div>
             </li>            
-            <li>
-                <input class="search-field search-field-active" type="textfield" title="Search..."/>
-            </li>
             <li>
                 <h2 class="web heading"><a href="#web">Web</a></h2>
                 <ul class="web dropdown collapse">
@@ -35,20 +45,8 @@
                     {/twitter.categories}
                 </ul>
             </li>
-            <li class="social first-social social-buffer"> <!-- TODO: fill out image for facebook -->
-                <a class="facebook-link" href="#" 
-                    data-link="http://beastbestawards.com" 
-                    data-picture="http://beastbestawards.com/img/bestofweb.jpg" 
-                    data-name="The Daily Beast's 2013 Beast Best Awards" 
-                    data-description="The Daily Beast selects the best websites and Twitter accounts in the 2013 Beast Best Awards.">
-                    <span class="icon-facebook" aria-hidden="true"></span>
-                </a>
-                <a class="twitter-link" target="_blank" 
-                    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fbeastbestawards.com&text=Check out @TheDailyBeast's 2013 %23BeastBest Awards for the best Twitter accounts and websites!&related=Newsweek&counturl=http://beastbestawards.com">
-                    <span class="icon-twitter" aria-hidden="true"></span>
-                </a>
-            </li>
-            <li class="social">
+            <li class="buffered-object social-buffer">
+                <input class="search-field search-field-active" type="textfield" title="Search..."/>
             </li>
         </ul>   
     </nav>

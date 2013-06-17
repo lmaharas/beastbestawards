@@ -132,7 +132,7 @@ a:hover {
 	position:relative;
 }
 .social-buffer{
-	top:20px;
+	margin-top:20px !important;
 }
 
 .nav .tdb a,

@@ -924,11 +924,11 @@
         });
 
         $('.heading.web a').click(function(){
-            $('.first-social').addClass('social-buffer');
+            $('.buffered-object').addClass('social-buffer');
         });
 
         $('.heading.twitter a').click(function(){
-            $('.first-social').removeClass('social-buffer');
+            $('.buffered-object').removeClass('social-buffer');
         })
 
 
