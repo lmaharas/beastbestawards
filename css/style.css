@@ -471,7 +471,7 @@ a:hover {
 	height:275px;
 }
 .three-deeee{
-		-webkit-transform: scale3d(1,1,1);
+	-webkit-transform: scale3d(1,1,1);
 }
 .the-credits{
 	position: relative;

@@ -775,7 +775,7 @@
 
         $overlayItem.css({'display': 'block', 'left': leftMove, 'top': topMove });
         $overlay.css('display', 'block');
-        $overlayItem.addClass('three-deeee')
+        $overlayItem.addClass('three-deeee');
         overlayOpen = true;
     }
 
