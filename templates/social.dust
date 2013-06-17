@@ -6,6 +6,6 @@
     <span class="icon-facebook" aria-hidden="true"></span>
 </a>
 <a class="twitter-link" target="_blank" 
-    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fbeastbestawards.thedailybeast.com/{id}&text=Congrats {?handle}{handle}{:else}{name}{/handle} for being named one of @thedailybeast's %23beastbest {?tweet}Twitter accounts{:else}Websites{/tweet}!&related=Newsweek&counturl=http://beastbestawards.thedailybeast.com/#{id}">
+    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fbeastbestawards.thedailybeast.com/{id}&text=Congrats {?handle}{handle}{:else}{name}{/handle} for being named one of @thedailybeast's %23beastbest {?tweet}Twitter accounts{:else}Websites{/tweet}!&related=Newsweek&counturl=http://beastbestawards.thedailybeast.com/%23{id}">
     <span class="icon-twitter" aria-hidden="true"></span>
 </a> 

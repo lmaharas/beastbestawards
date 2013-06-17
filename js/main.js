@@ -894,7 +894,7 @@
         $('.twitter-link').on('click', function(e){
             e.preventDefault();
             var href = $(this).attr('href');
-            var leftPos = e.pageX + 400;
+            var leftPos = e.pageX;
             var topPos = e.pageY;
             var settings = 'width=500,height=400,top=' + topPos + ',left=' + leftPos + ',scrollbars=no,location=0,statusbars=0,menubars=0,toolbars=0,resizable=0';
             
