@@ -1,6 +1,7 @@
 {>"nav"/}
 
 <section class="content">
+
     <div class="overlay">
         {#twitter.items}
             {>"overlayitem"/}            
@@ -9,17 +10,16 @@
             {>"overlayitem"/}            
         {/web.items}
     </div>
-
-    <ul class="twitter clearfix">
-        {#twitter}
-            {>"item"/}            
-        {/twitter}
-    </ul>
     <ul class="web clearfix">
         {#web}
             {>"item"/}            
         {/web}
     </ul>  
+    <ul class="twitter clearfix">
+        {#twitter}
+            {>"item"/}            
+        {/twitter}
+    </ul>
 </section>
 
 {>"facebook"/}

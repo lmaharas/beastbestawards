@@ -715,15 +715,19 @@
     
     var overlayOpen = false,
         aboutOpen = true,
-        currentState = "web";
+        currentState = "all";
 
     function showFilters(section) {
         var duration = 300,
             $nav = $('.nav'),
             $filter =   $nav.find('.' + section + '.dropdown').filter(':hidden');
-        if($filter.length !== 0) {
-            $nav.find('.dropdown').filter(':visible').slideUp(duration);
-            $filter.stop().slideDown(duration);
+        if(section == 'all'){
+            $nav.find('.dropdown').slideUp(duration);
+        }else{
+            if($filter.length !== 0) {
+                $nav.find('.dropdown').filter(':visible').slideUp(duration);
+                $filter.stop().slideDown(duration);
+            }
         }
     }
 
@@ -739,8 +743,13 @@
 
     function showContent(section) {
         var $content = $('.content');
-        $content.find("ul").hide();
-        $content.find('.' + section).show();
+        if(section == 'all'){
+            $content.find('.twitter').show();
+            $content.find('.web').show();
+        }else{
+            $content.find("ul").hide();
+            $content.find('.' + section).show();
+        }
     }
 
     function openOverlay(overlayId) {
