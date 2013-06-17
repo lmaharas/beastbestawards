@@ -1,7 +1,7 @@
 <a class="facebook-link" href="#" 
     data-link="http://beastbestawards.thedailybeast.com/#{id}" 
     data-picture="http://beastbestawards.thedailybeast.com/{imgPath}" 
-    data-name="{name} named one of The Daily Beast's 'Beast Best' {?tweet}Twitter Accounts{:else}Websites{/tweet}" 
+    data-name="{name} named one of The Daily Beast's 'Beast Best' {?tweet}Twitter accounts{:else}websites{/tweet}" 
     data-description="See who else made the cut at BeastBestAwards.com!">
     <span class="icon-facebook" aria-hidden="true"></span>
 </a>
