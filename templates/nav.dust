@@ -4,6 +4,9 @@
         <img src="img/logo.png" alt="Best of The Daily Beast 2013">
         <h1 class="page-title ir">Beast Best Awards 2013</h1>
     </a> 
+    <div>
+    beastbest
+    </div>
     <nav>
         <ul class="sections">
             <li class="social first-social"> <!-- TODO: fill out image for facebook -->
