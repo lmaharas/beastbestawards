@@ -344,7 +344,7 @@ a:hover {
 }
 
 .content .overlay {
-	position: absolute;
+	position: fixed;
 	z-index: 100;
 	background-color: rgba(255,255,255,0.9);
 }
@@ -353,7 +353,6 @@ a:hover {
 .content .info {
 	position: relative;
 	height: 500px;
-	margin:0 auto;
 	width: 380px;
 	text-align: center;
 	z-index: 110;
