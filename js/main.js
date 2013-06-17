@@ -911,6 +911,8 @@
 
         $('.logo').on('click', function(e){
             showAbout();
+            $('.buffered-object').addClass('social-buffer');
+
         });
 
         $('.twitter-link').on('click', function(e){
