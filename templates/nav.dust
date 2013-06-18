@@ -45,8 +45,8 @@
                     {/twitter.categories}
                 </ul>
             </li>
-            <li class="buffered-object social-buffer">
-                <input class="search-field search-field-active" type="textfield" title="Search..."/>
+            <li class="search">
+                <input class="search-field search-field-active" type="textfield" title="Search" placeholder="Search..."/>
             </li>
         </ul>   
     </nav>

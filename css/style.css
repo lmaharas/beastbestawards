@@ -13,27 +13,17 @@
  * DEFAULT
  */
 
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
 
 body {
 	font-family: "TitlingGothicFBStandCond", "Arial Narrow", Arial, sans-serif;
 	font-size: 12px;
 }
 
-@-moz-document url-prefix() {
-    .nav .sections a, .item-rubric, .main h3 a, .content .info .text, .content .info .quote  {
-        font-weight:normal !important;
-        letter-spacing: 1px;
-    }
-    .nav .wrapper .main p{
-        font-weight:normal !important;
-    }
-}
 a {
 	color: #000;
-}
-
-a:hover {
-	color: #ccc;
 }
 
 
@@ -49,7 +39,6 @@ a:hover {
 	text-align: center;
 	position: fixed;
 	text-transform: uppercase;
-	font-weight: bold;
 	z-index: 110;
 }
 
@@ -84,18 +73,19 @@ a:hover {
 	padding:3px;
 }
 
+.nav .tdb {
+	margin-bottom: 10px;
+	width: 100%;
+	background-color: #ee3224;
+	letter-spacing: 1px;
+}
+
 .nav .tdb a:hover {
 	color: #000;
     -webkit-transition: all .3s ease-in-out;
        -moz-transition: all .3s ease-in-out;
          -o-transition: all .3s ease-in-out;
             transition: all .3s ease-in-out;
-}
-
-.nav .tdb {
-	margin-bottom: 10px;
-	width: 100%;
-	background-color: #ee3224;
 }
 
 .nav .sections > li {
@@ -120,7 +110,9 @@ a:hover {
 
 .nav .sections .social a:hover,
 .nav .sections > li .heading a:hover,
-.nav .sections > li .heading.active a {
+.nav .sections > li .heading.active a,
+.content .info a:hover,
+.nav .close:hover {
 	color: #ee3224;
     -webkit-transition: all .3s ease-in-out;
        -moz-transition: all .3s ease-in-out;
@@ -131,15 +123,11 @@ a:hover {
 .nav .sections .first-social{
 	position:relative;
 }
-.social-buffer{
-	margin-top:20px !important;
-}
 
 .nav .tdb a,
 .nav .sections a {
 	padding: 5px 0;
 }
-
 
 .nav .sections .heading a,
 .nav .sections .about a {
@@ -154,15 +142,12 @@ a:hover {
 
 .nav .sections .search a,.nav .sections .about a {
 	color: #FFF;
-	font-weight: bold;
-	/*border: 1px solid #FFF;*/
 	margin-bottom:5px;
 }
 
 .nav .sections .search a{
 	margin-bottom:25px;
 }
-
 
 .nav .wrapper {
 	display: none;	
@@ -212,10 +197,20 @@ a:hover {
 	padding: 5px;
 }
 
+.nav .dropdown {
+	margin-bottom: 20px;
+}
+
+.nav .dropdown li {
+	text-transform: capitalize;
+	letter-spacing: 1px;
+}
+
 .nav .dropdown li:hover{
 	cursor:pointer;
 	cursor:hand;
 }
+
 .nav .dropdown li:hover a,
 .nav .dropdown li a.active {
 	color: #fff;
@@ -227,18 +222,9 @@ a:hover {
             box-sizing: border-box;
 }
 
-.nav .dropdown {
-	margin-bottom: 10px;
-}
-
-.nav .dropdown li {
-	text-transform: capitalize;
-}
-
 .nav .icon-twitter,
 .nav .icon-facebook {
 	font-size: 25px;
-	margin: 5px;
 }
 
 
@@ -361,12 +347,6 @@ a:hover {
             box-sizing: border-box;
 }
 
-.content .info a:hover,
-.nav .close:hover {
-	color: #ee3224 !important;
-}
-
-
 .content .info .circle {
 	position: static;
 	width: 255px;
@@ -418,35 +398,40 @@ a:hover {
 .content .info .title {
 	font-size: 24px;
 	margin: 5px 0 10px 0;
+	letter-spacing: 1px;
 }
 
-.content .info .text, .content .info .quote {
-	font-weight: bold;
+.content .info .text, 
+.content .info .quote {
 	line-height: 1.4;
 	font-size: 16px;
+	letter-spacing: 1px;
 }
 
-.content .info.section-twitter .text{
-	font-size:18px;
-	line-height:1.2;
+.content .section-twitter .text {
+	font-size: 18px;
+	line-height: 1.2;
+	letter-spacing: 1px;
 }
+
 .content .info .quote .twitter-bird {
 	height: 13px;
 	margin-right: 4px;
 }
 
-.item-rubric{
-	font-family:"TitlingGothicFBMediumComp","Arial Narrow",Arial,sans-serif;
+.item-rubric {
+	font-family: "TitlingGothicFBStandCond", "Arial Narrow", Arial, sans-serif;
 	text-align: center;
 	font-size: 16px;
+	letter-spacing: 1px;
 }
 
 .main h3 a{
 	border-bottom: 1px dotted #000;
 }
-.main h3 a:hover{
-	color:#ee3224 !important;
-}
+
+
+/* Search */
 .search-field{
 	width:65%;
 	margin-bottom:15px;
@@ -469,16 +454,4 @@ a:hover {
 .img-placeholder img{
 	width:380px;
 	height:275px;
-}
-.three-deeee{
-	-webkit-transform: scale3d(1,1,1);
-}
-.the-credits{
-	position: relative;
-	left:150px;
-}
-.credit-text{
-	position:absolute;
-	bottom:0;
-	width:750px;
 }
