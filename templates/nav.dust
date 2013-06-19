@@ -46,7 +46,7 @@
                 </ul>
             </li>
             <li class="search">
-                <input class="search-field search-field-active" type="textfield" title="Search" placeholder="Search..."/>
+                <input class="search-field" type="textfield" title="Search..." placeholder="Search..."/>
             </li>
         </ul>   
     </nav>

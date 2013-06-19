@@ -82,10 +82,10 @@ a {
 
 .nav .tdb a:hover {
 	color: #000;
-    -webkit-transition: all .3s ease-in-out;
-       -moz-transition: all .3s ease-in-out;
-         -o-transition: all .3s ease-in-out;
-            transition: all .3s ease-in-out;
+    -webkit-transition: color .2s ease-in-out;
+       -moz-transition: color .2s ease-in-out;
+         -o-transition: color .2s ease-in-out;
+            transition: color .2s ease-in-out;
 }
 
 .nav .sections > li {
@@ -102,22 +102,20 @@ a {
 	border: none;
 	background-color: transparent;
 	padding: 0;
-    -webkit-transition: all .3s ease-in-out;
-       -moz-transition: all .3s ease-in-out;
-         -o-transition: all .3s ease-in-out;
-            transition: all .3s ease-in-out;
+    -webkit-transition: color .2s ease-in-out;
+       -moz-transition: color .2s ease-in-out;
+         -o-transition: color .2s ease-in-out;
+            transition: color .2s ease-in-out;
 }
 
 .nav .sections .social a:hover,
 .nav .sections > li .heading a:hover,
-.nav .sections > li .heading.active a,
-.content .info a:hover,
-.nav .close:hover {
+.nav .sections > li .heading.active a {
 	color: #ee3224;
-    -webkit-transition: all .3s ease-in-out;
-       -moz-transition: all .3s ease-in-out;
-         -o-transition: all .3s ease-in-out;
-            transition: all .3s ease-in-out;
+    -webkit-transition: color .2s ease-in-out;
+       -moz-transition: color .2s ease-in-out;
+         -o-transition: color .2s ease-in-out;
+            transition: color .2s ease-in-out;
 }
 
 .nav .sections .first-social{
@@ -134,10 +132,10 @@ a {
 	position: relative;
 	letter-spacing: 2px;
 	color: #fff;
-    -webkit-transition: all .3s ease-in-out;
-       -moz-transition: all .3s ease-in-out;
-         -o-transition: all .3s ease-in-out;
-            transition: all .3s ease-in-out;
+    -webkit-transition: color .2s ease-in-out;
+       -moz-transition: color .2s ease-in-out;
+         -o-transition: color .2s ease-in-out;
+            transition: color .2s ease-in-out;
 }
 
 .nav .sections .search a,.nav .sections .about a {
@@ -162,10 +160,10 @@ a {
 	text-transform: none;
 	font-size: 16px;
 	line-height: 1.5;
-    -webkit-transition: all .3s ease-in-out;
-       -moz-transition: all .3s ease-in-out;
-         -o-transition: all .3s ease-in-out;
-            transition: all .3s ease-in-out;
+    -webkit-transition: color .2s ease-in-out;
+       -moz-transition: color .2s ease-in-out;
+         -o-transition: color .2s ease-in-out;
+            transition: color .2s ease-in-out;
 }
 
 .nav .wrapper.open {
@@ -282,7 +280,7 @@ a {
 	text-align: center;
 	vertical-align: middle;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     -webkit-transition: all .2s ease-in-out;
        -moz-transition: all .2s ease-in-out;
@@ -300,7 +298,7 @@ a {
        -moz-border-radius: 150px;
             border-radius: 150px;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-         ilter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     -webkit-transition: all .2s ease-in-out;
        -moz-transition: all .2s ease-in-out;
@@ -310,7 +308,7 @@ a {
 
 .content .circle:hover img {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
 	opacity: 0.2;
     -webkit-transition: all .2s ease-in-out;
        -moz-transition: all .2s ease-in-out;
@@ -332,7 +330,8 @@ a {
 .content .overlay {
 	position: fixed;
 	z-index: 100;
-	background-color: rgba(255,255,255,0.9);
+	background-color: #fff;
+	background-color: rgba(255,255,255,0.9);  
 }
 
 /* info */
@@ -351,11 +350,8 @@ a {
 	position: static;
 	width: 255px;
 	height: 255px;
+	margin: 20px;
 	display: inline-block;
-	box-shadow: 0 0 32px #CCC;
-	-moz-box-shadow: 0 0 32px #CCC;
-	-webkit-box-shadow: 0 0 32px #CCC;
-	margin: 20px;	
     -webkit-border-radius: 255px;
        -moz-border-radius: 255px;
             border-radius: 255px;
@@ -368,13 +364,30 @@ a {
 }
 
 .content .info .close,
-.nav .wrapper .close {
+.nav .close {
 	float: right;
 	height: 26px;
 	font-size: 26px;
 	display: block;
 	position: relative;
 	top: -18px;
+}
+
+.content .info a,
+.nav .close {
+    -webkit-transition: color .2s ease-in-out;
+       -moz-transition: color .2s ease-in-out;
+         -o-transition: color .2s ease-in-out;
+            transition: color .2s ease-in-out;
+}
+
+.content .info a:hover,
+.nav .close:hover {
+	color: #ee3224;
+    -webkit-transition: color .2s ease-in-out;
+       -moz-transition: color .2s ease-in-out;
+         -o-transition: color .2s ease-in-out;
+            transition: color .2s ease-in-out;
 }
 
 .content .info .facebook-link,
@@ -399,6 +412,14 @@ a {
 	font-size: 24px;
 	margin: 5px 0 10px 0;
 	letter-spacing: 1px;
+}
+
+.content .info .title a {
+	border-bottom: 1px dotted #000;
+}
+
+.content .info .title a:hover {
+	border-bottom: 1px dotted #ee3224;
 }
 
 .content .info .text, 
@@ -426,31 +447,29 @@ a {
 	letter-spacing: 1px;
 }
 
-.main h3 a{
-	border-bottom: 1px dotted #000;
-}
-
 
 /* Search */
-.search-field{
-	width:65%;
-	margin-bottom:15px;
+.search-field {
+	width: 70%;
 }
 
-.search-field{
-	color:black;
+.search-field {
+	color: #000;
 }
 
-.search-field-active { 
+.search-field .active { 
 	color: #848484; 
 }
-.ui-autocomplete{
-	z-index:999999;
+
+.ui-autocomplete {
+	z-index: 1000;
 }
+
 .img-placeholder{
 	width: 380px;
 	height:300px;
 }
+
 .img-placeholder img{
 	width:380px;
 	height:275px;

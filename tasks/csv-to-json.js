@@ -60,7 +60,7 @@ function normalizeItems(items, folderName) {
 		var obj = {
 			label: item.name + ', ' + item.handle,
 			link: item.id
-		}
+		};
 		autocomplete_list.push(obj);
 	}
 
