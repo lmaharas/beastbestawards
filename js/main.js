@@ -5,6 +5,36 @@
         aboutOpen = true,
         currentState = "all";
 
+    function cacheOverlayImg(el){
+        var $el = $(el),
+            parent = $el.parent(),
+            data = $el.data(),
+            lgImg = data.lgimage;
+
+        $('<img/>')[0].src = lgImg;
+    
+    }
+
+    function loadOverlayImg(className) {
+
+        var isWeb = false;
+        if (className.indexOf("web-") == 0) {
+            isWeb = true;
+        }
+        var imgClass;
+        if (isWeb) {
+            imgClass = "rect";
+        } else {
+             imgClass = "circle";   
+        }
+
+
+        var imgSrc = $('.' + className).data('lgimage');
+        var imgMarkup = '<img class="' + imgClass + '" src="' + imgSrc + '"/>';
+
+        $('.' + className + ' .main .image').html(imgMarkup);       
+    }
+
     function searchKeyDown(keyPressed) {
 
         if (keyPressed.keyCode === 13) {
@@ -67,7 +97,7 @@
             $content.find('.twitter').show();
             $content.find('.web').show();
             $(window).scroll();
-        }else{
+        } else {
             $content.find("ul").hide();
             $content.find('.' + section).show();
         }
@@ -78,16 +108,10 @@
             windowHeight = $(window).height(),
             $overlay = $('.content').find('.overlay'),
             $overlayItem = $overlay.find('.' + overlayId),
-            $img_placeholder = $overlayItem.find('.img-placeholder'),
-            img_src = $img_placeholder.data('src'),
-            img_shape = $img_placeholder.data('shape'),
-            item_img = '<img width="380" height="275" class=" ' + img_shape + '" src="' + img_src + '"/>',
             infoWidth = $('.info').width(),
             infoHeight = $('.info').height(),
             leftMove = overlayWidth/2 - infoWidth/2,
-            topMove = windowHeight/2 - infoHeight/ 2;
-
-        $img_placeholder.html(item_img);
+            topMove = windowHeight/2 - infoHeight/ 2;        
 
         $overlayItem.css({'display': 'block', 'left': leftMove, 'top': topMove });       
         $overlay.css('display', 'block');
@@ -100,23 +124,20 @@
         overlayOpen = false;
     }
 
-    function fbInit(){
+    function fbInit() {
         $.ajaxSetup({ cache: true });
         $.getScript('//connect.facebook.net/en_US/all.js', function(){
           window.fbAsyncInit = function() {
             FB.init({
               appId: '475320612543167'
             });      
-           
-             $('.facebook-link').on('click', function(e) {
-                e.preventDefault();
-                facebookLink($(this));
-            });
+
           };
         });
     }
 
     function facebookLink($el) {
+
         var data =  $el.data(),
             obj = {
                 method:'feed',
@@ -126,7 +147,13 @@
                 caption:'The Daily Beast',
                 description: data.description
             };
-        FB.ui(obj, function(){});
+        if( typeof(FB) == 'undefined' ) {
+            alert('FB undefined');
+        } else {
+
+            FB.ui(obj, function(){});
+        
+        }
     }
 
     function initIsotope() {
@@ -174,6 +201,7 @@
 
         if (parts.length === 3){
             //show item
+            loadOverlayImg(hash);
             openOverlay(hash);
             hideAbout();
 
@@ -187,6 +215,10 @@
     }
 
     function bindEvents() {
+
+        $('.bubble').on('mouseenter', function() {
+            cacheOverlayImg(this);
+        });
 
         $('.search-field').focus( function() {
 
@@ -247,6 +279,12 @@
             showAbout();
         });
 
+
+        $('.facebook-link').on('click', function(e) {
+            e.preventDefault();
+            facebookLink($(this));
+        });
+
         $('.twitter-link').on('click', function(e){
             e.preventDefault();
             var href = $(this).attr('href'),
@@ -259,12 +297,12 @@
 
         $(window).on('hashchange', function(){
             handleHash();
-        });   
+        });
 
     }
 
     function loadBody() {
-        fbInit();
+
         $.getJSON("data.json", function(data){
 
             dust.render("body", data, function(err, out) {
@@ -283,6 +321,7 @@
 
     $(document).ready(function() {
         loadBody();
+        fbInit();
     });
 }());
 

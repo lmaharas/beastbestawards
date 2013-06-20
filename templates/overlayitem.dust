@@ -1,11 +1,12 @@
-<div class="info {id} section-{section}">
+<div class="info {id} section-{section}"> 
     <a class="close" href="#"><span class="icon-close-x" aria-hidden="true"></span></a>
     <div class="main">
     		<h5 class="item-rubric">{category}</h5>
         <h3 class="title"><a href="{url}" target="_blank">{name}</a></h3>
         {?tweet}<p class="text">{blurb}</p>{/tweet}
-        <a href="{url}" target="_blank" data-obehav="true">
-        	<div class="img-placeholder" data-shape="{?imgPathLg}rect{:else}circle{/imgPathLg}" data-src="{?imgPathLg}{imgPathLg}{:else}{imgPath}{/imgPathLg}"></div>
+        <a href="{url}" target="_blank">
+        	<!-- <div class="img-placeholder" data-shape="{?imgPathLg}rect{:else}circle{/imgPathLg}" data-src="{?imgPathLg}{imgPathLg}{:else}{imgPath}{/imgPathLg}"></div> -->
+            <img class="{?imgPathLg}rect{:else}circle{/imgPathLg}" src="{?imgPathLg}{imgPathLg}{:else}{imgPath}{/imgPathLg}"/>
         </a>
         {?tweet}<p class="quote"><img class="twitter-bird" src="img/twitter-bird.png">"{tweet}"</p>{/tweet}
         {?imgPathLg}<p class="text">{blurb}</p>{/imgPathLg}

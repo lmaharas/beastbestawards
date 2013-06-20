@@ -42,14 +42,14 @@ function normalizeItems(items, folderName) {
 		item = items[i];
 		imgName = item.name.toLowerCase().replace(/[^a-z0-9]/g, "");
 
-		if (imgName == 'jennawortham' || imgName == 'andrewwk'){
-			item.imgPath = "img/" + folderName + "/saved_for_web/" + imgName + ".gif";
-		}else{
-			item.imgPath = "img/" + folderName + "/saved_for_web/" + imgName + ".jpg";
-		}
+		
+		item.imgPath = "img/" + folderName + "/" + imgName + ".jpg";
+		
 
 		if (folderName === "web") {
-			item.imgPathLg = "img/" + folderName + "/saved_for_web/" + imgName + "_home.png";
+			item.imgPathLg = "img/" + folderName + "/" + imgName + "_home.png";
+		} else {
+			item.imgPathLg = "img/" + folderName + "/" + imgName + ".jpg";
 		}
 
     categoryId = getCategoryId(item.category, folderName);

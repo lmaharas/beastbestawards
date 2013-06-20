@@ -1,16 +1,17 @@
 <!-- crazyEgg -->
 <script type="text/javascript">    
-setTimeout(function(){
-var a=document.createElement("script");
-    
-var b=document.getElementsByTagName("script")[0];
-    
-a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0013/8759.js?"+Math.floor(new Date().getTime()/3600000);
-   
-a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)
-}, 1);
+    setTimeout(function(){
+        var a=document.createElement("script");
+            
+        var b=document.getElementsByTagName("script")[0];
+            
+        a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0013/8759.js?"+Math.floor(new Date().getTime()/3600000);
+           
+        a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)
+    }, 1);
 </script>
 
+<!-- chartBeat -->
 <script type="text/javascript">
     var _sf_async_config = {uid:20421,domain:"thedailybeast.com",useCanonical:true, path:"/beastbestawards.html"};
     (function() {
@@ -26,19 +27,3 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)
                 loadChartbeat : function() { oldonload(); loadChartbeat();};
     })();
 </script>
-
-<!-- SiteCatalyst -->
-<script language="JavaScript" type="text/javascript" src="js/s_code.js"></script>
-<script language="JavaScript" type="text/javascript"><!--
-s.pageName = s.prop1 = "Beast Best Awards";
-
-/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
-var s_code = s.t();
-if (s_code)document.write(s_code)//--></script>
-<script language="JavaScript" type="text/javascript"><!--
-if (navigator.appVersion.indexOf('MSIE') >= 0)document.write(unescape('%3C') + '\!-' + '-')
-//--></script>
-<noscript><img src="http://rtst.122.2o7.net/b/ss/rtstdailybeast,rtstglobal/1/H.26--NS/0"
-               height="1" width="1" border="0" alt=""/></noscript>
-<!--/DO NOT REMOVE/-->
-<!-- End SiteCatalyst code version: H.26.0. -->
