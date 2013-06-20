@@ -12,20 +12,21 @@
             lgImg = data.lgimage;
 
         $('<img/>')[0].src = lgImg;
-    
+   
     }
 
     function loadOverlayImg(className) {
 
         var isWeb = false;
-        if (className.indexOf("web-") == 0) {
+        if (className.indexOf("web-") === 0) {
             isWeb = true;
         }
+        
         var imgClass;
         if (isWeb) {
             imgClass = "rect";
         } else {
-             imgClass = "circle";   
+             imgClass = "circle";  
         }
 
 
@@ -147,13 +148,8 @@
                 caption:'The Daily Beast',
                 description: data.description
             };
-        if( typeof(FB) == 'undefined' ) {
-            alert('FB undefined');
-        } else {
 
-            FB.ui(obj, function(){});
-        
-        }
+        FB.ui(obj, function(){});
     }
 
     function initIsotope() {
@@ -278,7 +274,6 @@
         $('.logo').on('click', function(){
             showAbout();
         });
-
 
         $('.facebook-link').on('click', function(e) {
             e.preventDefault();
