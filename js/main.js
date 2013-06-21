@@ -12,28 +12,17 @@
             lgImg = data.lgimage;
 
         $('<img/>')[0].src = lgImg;
-   
+  
     }
 
     function loadOverlayImg(className) {
 
-        var isWeb = false;
-        if (className.indexOf("web-") === 0) {
-            isWeb = true;
-        }
-        
-        var imgClass;
-        if (isWeb) {
-            imgClass = "rect";
-        } else {
-             imgClass = "circle";  
-        }
+        var imgClass = className.match("^web") ? 'rect' : 'circle',
+            imgSrc = $('.' + className).data('lgimage'),
+            imgMarkup = '<img class="' + imgClass + '" src="' + imgSrc + '"/>';
 
+        $('.' + className + ' .main .image').html(imgMarkup);
 
-        var imgSrc = $('.' + className).data('lgimage');
-        var imgMarkup = '<img class="' + imgClass + '" src="' + imgSrc + '"/>';
-
-        $('.' + className + ' .main .image').html(imgMarkup);       
     }
 
     function searchKeyDown(keyPressed) {
@@ -71,24 +60,26 @@
     function showFilters(section) {
         var duration = 300,
             $nav = $('.nav'),
-            $filter =   $nav.find('.' + section + '.dropdown').filter(':hidden');
+            $filter = $nav.find('.' + section + '.dropdown').filter(':hidden');
+
         if(section === 'all') {
             $nav.find('.dropdown').slideUp(duration);
-        } else {
-            if($filter.length !== 0) {
-                $nav.find('.dropdown').filter(':visible').slideUp(duration);
-                $filter.stop().slideDown(duration);
-            }
+
+        } else if( $filter.length !== 0 ) {
+            $nav.find('.dropdown').filter(':visible').slideUp(duration);
+            $filter.stop().slideDown(duration);
+
         }
+
     }
 
     function showAbout() {
-        $('.wrapper').addClass('open');
+        $('.about-popup').addClass('open');
         aboutOpen = true;
     }
 
     function hideAbout() {
-        $('.wrapper').removeClass('open');
+        $('.about-popup').removeClass('open');
         aboutOpen = false;
     }
 
@@ -104,36 +95,49 @@
         }
     }
 
-    function openOverlay(overlayId) {
-        var overlayWidth = $('.overlay').width(),
+    function centerOverlay(overlayId) {
+        var navWidth = $('.nav').width(),
+            windowWidth = $(window).width(),
             windowHeight = $(window).height(),
-            $overlay = $('.content').find('.overlay'),
-            $overlayItem = $overlay.find('.' + overlayId),
-            infoWidth = $('.info').width(),
-            infoHeight = $('.info').height(),
-            leftMove = overlayWidth/2 - infoWidth/2,
-            topMove = windowHeight/2 - infoHeight/ 2;        
+            infoWidth = windowWidth > 500 ? 380 : windowWidth * .7,
+            infoHeight = $('.' + overlayId).height(),
+            leftMove = (windowWidth - navWidth)/2 - infoWidth/2,
+            topMove = windowHeight/2 - infoHeight/ 2;   
 
-        $overlayItem.css({'display': 'block', 'left': leftMove, 'top': topMove });       
-        $overlay.css('display', 'block');
+        
+        $('.content').find('.overlay').find('.' + overlayId).css({'left': leftMove + navWidth, 'top': topMove });
+        $('.content').find('.overlay').css({ 'left': navWidth });
+
+        if (!overlayOpen) {
+            openOverlay(overlayId);
+        }
+
+    }
+
+
+    function openOverlay(overlayId) {
+        var $overlay = $('.content').find('.overlay'),
+            $overlayItem = $overlay.find('.' + overlayId);      
+
+        $overlayItem.show();
+        $overlay.show();
         overlayOpen = true;
     }
 
     function closeOverlay() {
-        $('.info').css('display', 'none');
-        $('.overlay').css('display', 'none');
+        $('.info').hide();
+        $('.overlay').hide();
         overlayOpen = false;
     }
 
     function fbInit() {
         $.ajaxSetup({ cache: true });
-        $.getScript('//connect.facebook.net/en_US/all.js', function(){
-          window.fbAsyncInit = function() {
-            FB.init({
-              appId: '475320612543167'
-            });      
-
-          };
+        $.getScript('//connect.facebook.net/en_US/all.js', function() {
+            window.fbAsyncInit = function() {
+                FB.init({
+                  appId: '475320612543167'
+                });
+            };
         });
     }
 
@@ -198,7 +202,7 @@
         if (parts.length === 3){
             //show item
             loadOverlayImg(hash);
-            openOverlay(hash);
+            centerOverlay(hash);
             hideAbout();
 
         } else if(parts.length >= 1) {
@@ -292,6 +296,15 @@
 
         $(window).on('hashchange', function(){
             handleHash();
+        });
+
+        $(window).resize(function () {
+            var hash = window.location.hash ? window.location.hash.substr(1) : currentState;
+            
+            if(overlayOpen) {
+                centerOverlay(hash);
+            }
+
         });
 
     }

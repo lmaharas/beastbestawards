@@ -1,5 +1,5 @@
 {#items}
-<li class="bubble {categoryId}" data-lgimage = "{?imgPathLg}{imgPathLg}{/imgPathLg}">
+<li class="bubble {categoryId}" data-lgimage = "{imgPathLg}">
     <a class="circle" href="#{id}">
         <img src="{imgPath}">
         <h3 class="title">{?tweet}{handle}{:else}{name}{/tweet}</h3>

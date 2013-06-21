@@ -147,7 +147,7 @@ a {
 	margin-bottom:25px;
 }
 
-.nav .wrapper {
+.nav .about-popup {
 	display: none;	
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
@@ -166,12 +166,12 @@ a {
             transition: color .2s ease-in-out;
 }
 
-.nav .wrapper.open {
+.nav .about-popup.open {
 	display: block;
     opacity: 1;
 }
 
-.nav .wrapper .main p {
+.nav .about-popup .main p {
 	margin-bottom: 10px;
 	letter-spacing: 1px;
 }
@@ -232,7 +232,7 @@ a {
  */
 .content {
 	position: relative;
-	margin-left: 102px;  /* width = nav width */
+	margin-left: 110px;  /* width = nav width */
 	padding: 4% 0 11% 4%;
 }
 
@@ -308,8 +308,8 @@ a {
 }
 
 .content .circle:hover img {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
 	opacity: 0.2;
     -webkit-transition: all .2s ease-in-out;
        -moz-transition: all .2s ease-in-out;
@@ -322,6 +322,13 @@ a {
 .content .overlay,
 .content .info {
 	display: none;
+/*    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	opacity: 0;
+    -webkit-transition: all .2s ease-in-out;
+       -moz-transition: all .2s ease-in-out;
+         -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;*/
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -330,7 +337,7 @@ a {
 
 .content .overlay {
 	position: fixed;
-	z-index: 100;
+	z-index: 120;
 	background-color: #fff;
 	background-color: rgba(255,255,255,0.9);  
 }
@@ -405,7 +412,7 @@ a {
 }
 
 .content .info .main,
-.nav .wrapper .main {
+.nav .about-popup .main {
 	clear: both;
 	margin-bottom: 10px;
 }
@@ -442,11 +449,15 @@ a {
 	margin-right: 4px;
 }
 
-.item-rubric {
+.content .info .item-rubric {
 	font-family: "TitlingGothicFBStandCond", "Arial Narrow", Arial, sans-serif;
 	text-align: center;
 	font-size: 16px;
 	letter-spacing: 1px;
+}
+
+.content .info .image {
+	display: block;
 }
 
 
@@ -475,4 +486,42 @@ a {
 .img-placeholder img{
 	width:380px;
 	height:275px;
+}
+
+
+/* media queries */
+@media (min-width: 0px) and (max-width: 499px) {
+
+	.content .info {
+		width: 70%;
+	}
+
+	.content .info .main {
+		margin-bottom: 0;
+		padding: 0 10px;
+	}
+
+	.content .info .item-rubric {
+		font-size: 14px;
+	}
+
+	.content .info .title {
+		font-size: 20px;
+		margin: 3px 0 6px 0;
+	}
+
+	.content .info .circle {
+		width: 180px;
+		height: 180px;
+	}
+
+	.content .info .text, 
+	.content .info .quote {
+		font-size: 12px;
+	}
+
+	.content .section-twitter .text {
+		font-size: 14px;
+	}
+
 }

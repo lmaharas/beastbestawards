@@ -20,7 +20,7 @@
                 </a>
             </li>
             <li><h2 class="heading about"><a href="#about">About</a></h2>
-                <div class="about-popup wrapper collapse">
+                <div class="about-popup collapse">
                     <a class="close" href="#"><span class="icon-close-x" aria-hidden="true"></span></a>
                     <div class="main">
                         <p>The Internet is infinite, but your time isn't. To help you surf wisely, The Daily Beast picked the most relevant, entertaining, original, and&mdash;in some cases&mdash;overlooked websites and Twitter feeds.<br/>Read them, skip the rest.</p>
